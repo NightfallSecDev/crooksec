@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Crooksec Intelligence</title>
+    <meta name="description"
+        content="Transparent security pricing for startups to enterprise ecosystems. Compare Crooksec's offensive and defensive tiers.">
+    <!-- Custom JS (Config & Interactions) -->
+    <script src="main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-darker relative overflow-x-hidden">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] bg-brand-darker"></div>
+    <div class="fixed inset-0 z-[-1] bg-grid opacity-20"></div>
+    <div
+        class="parallax-bg fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-cyan/20 blur-[120px] rounded-full mix-blend-screen z-[-1] pointer-events-none" data-speed="20">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/10 bg-brand-darker/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl"></i>
+                <span class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors">/ABOUT_US</a>
+                <a href="Pricing.html" class="text-brand-cyan transition-colors font-bold">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">/CASE_STUDIES</a>
+                <div class="relative group">
+                    <button class="hover:text-brand-cyan transition-colors flex items-center gap-1">
+                        /PARTNERS <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-brand-darker border border-white/10 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                        <a href="patner.html" class="block px-4 py-2 hover:bg-brand-cyan/10 hover:text-brand-cyan text-sm">Partner Network</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors">/CONTACT</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="weareinattck.html"
+                    class="hidden md:inline-flex px-4 py-2 border border-red-500 text-red-500 hover:bg-red-500/10 rounded-sm font-mono text-xs font-bold transition-all uppercase flash-text urgent-pulse">
+                    <i class="fa-solid fa-radiation mr-2"></i> Active Breach
+                </a>
+                <a href="contact.html"
+                    class="btn-scan hidden sm:inline-flex px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
+            <div class="flex flex-col gap-4 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/ABOUT_US</a>
+                <a href="Pricing.html" class="text-brand-cyan transition-colors font-bold py-2 border-b border-white/5">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/CASE_STUDIES</a>
+                <a href="patner.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PARTNER_NETWORK</a>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors py-2">/CONTACT</a>
+                <a href="contact.html" class="btn-scan w-full mt-2 px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all text-center">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-20 lg:pt-52 lg:pb-32 px-6 relative reveal overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center justify-center gap-2 mb-6 float-anim">
+                <span class="w-12 h-px bg-brand-cyan/50"></span>
+                <span class="text-brand-cyan font-mono text-sm tracking-widest uppercase inline-block font-bold">
+                    <i class="fa-solid fa-money-check-dollar mr-2"></i> Investment Tiers
+                </span>
+                <span class="w-12 h-px bg-brand-cyan/50"></span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-8">
+                Transparent <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-purple">
+                    Security Pricing
+                </span>
+            </h1>
+            <p class="text-xl text-slate-400 font-light leading-relaxed max-w-2xl mx-auto mb-10">
+                Scalable protection designed for startups to enterprise ecosystems. No hidden fees, just elite Human +
+                AI defense.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Tiers Section -->
+    <section class="pb-24 pt-8 relative z-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- P1: Startup -->
+                <div
+                    class="card-hover p-8 rounded-lg bg-slate-900/60 border border-white/10 relative overflow-hidden flex flex-col reveal delay-100">
+                    <div class="pricing-glow"></div>
+                    <div class="relative z-10 flex-grow">
+                        <h4 class="text-xl font-bold text-white mb-2 font-mono">P1: Startup</h4>
+                        <div class="text-4xl font-bold text-white mb-4">$999<span
+                                class="text-base font-normal text-slate-500">/mo</span></div>
+                        <p class="text-sm text-slate-400 mb-6 pb-6 border-b border-white/10">Essential continuous
+                            monitoring for early-stage companies to establish baseline security.</p>
+                        <ul class="space-y-4 mb-8 text-sm text-slate-300">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Weekly AI Vulnerability Scans</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Basic Asset Discovery</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Quarterly Human Audit</span></li>
+                            <li class="flex items-start opacity-50"><i
+                                    class="fa-solid fa-xmark text-slate-500 mt-1 mr-3 w-4"></i> <span>Cloud Architecture
+                                    Review</span></li>
+                            <li class="flex items-start opacity-50"><i
+                                    class="fa-solid fa-xmark text-slate-500 mt-1 mr-3 w-4"></i> <span>Active Threat
+                                    Hunting</span></li>
+                        </ul>
+                    </div>
+                    <a href="contact.html"
+                        class="text-center w-full py-3 bg-white/5 hover:bg-white/10 text-white font-mono text-sm border border-white/10 rounded transition-colors relative z-10 mt-auto">
+                        Deploy P1
+                    </a>
+                </div>
+
+                <!-- P2: Growth -->
+                <div
+                    class="card-hover p-8 rounded-lg bg-slate-900/80 border border-brand-cyan/50 relative overflow-hidden flex flex-col reveal delay-200 transform md:-translate-y-4 shadow-2xl shadow-brand-cyan/10">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-brand-cyan"></div>
+                    <div
+                        class="absolute top-4 right-4 bg-brand-cyan/20 text-brand-cyan text-xs font-mono px-3 py-1 rounded-full border border-brand-cyan/30 float-anim">
+                        POPULAR
+                    </div>
+                    <div class="pricing-glow"></div>
+                    <div class="relative z-10 flex-grow pt-4">
+                        <h4 class="text-xl font-bold text-white mb-2 font-mono">P2: Growth</h4>
+                        <div class="text-4xl font-bold text-white mb-4">$2,499<span
+                                class="text-base font-normal text-slate-500">/mo</span></div>
+                        <p class="text-sm text-slate-400 mb-6 pb-6 border-b border-white/10">Advanced defense layer and
+                            active testing for rapidly scaling applications.</p>
+                        <ul class="space-y-4 mb-8 text-sm text-slate-300">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span class="text-white font-medium">Daily AI Scans</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Cloud Posture (CSPM)</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Monthly Human Pen-Test</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Basic Dark Web Intel</span></li>
+                            <li class="flex items-start opacity-50"><i
+                                    class="fa-solid fa-xmark text-slate-500 mt-1 mr-3 w-4"></i> <span>Dedicated Security
+                                    Pod</span></li>
+                        </ul>
+                    </div>
+                    <a href="contact.html"
+                        class="text-center w-full py-4 bg-brand-cyan hover:bg-brand-cyan/90 text-brand-darker font-bold font-mono text-sm rounded shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-colors relative z-10 mt-auto">
+                        Deploy P2
+                    </a>
+                </div>
+
+                <!-- P3: Enterprise -->
+                <div
+                    class="card-hover p-8 rounded-lg bg-slate-900/60 border border-white/10 relative overflow-hidden flex flex-col reveal delay-300">
+                    <div class="pricing-glow"></div>
+                    <div class="relative z-10 flex-grow">
+                        <h4 class="text-xl font-bold text-white mb-2 font-mono">P3: Enterprise</h4>
+                        <div class="text-4xl font-bold text-white mb-4">$5,999<span
+                                class="text-base font-normal text-slate-500">/mo</span></div>
+                        <p class="text-sm text-slate-400 mb-6 pb-6 border-b border-white/10">Full-spectrum managed
+                            security, continuous red teaming, and threat hunting.</p>
+                        <ul class="space-y-4 mb-8 text-sm text-slate-300">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span class="text-white font-medium">Real-time AI Scans</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span class="text-white font-medium">Dedicated Security Pod</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Continuous Red Teaming</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>Full Dark Web Intel</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-cyan mt-1 mr-3 w-4"></i>
+                                <span>1hr SLA Incident Response</span></li>
+                        </ul>
+                    </div>
+                    <a href="contact.html"
+                        class="text-center w-full py-3 bg-white/5 hover:bg-white/10 text-white font-mono text-sm border border-white/10 rounded transition-colors relative z-10 mt-auto">
+                        Deploy P3
+                    </a>
+                </div>
+
+                <!-- P4: Nexus -->
+                <div
+                    class="card-hover p-8 rounded-lg bg-black/80 border border-brand-purple/30 relative overflow-hidden flex flex-col reveal delay-400">
+                    <div class="absolute inset-0 bg-brand-purple/5"></div>
+                    <div class="relative z-10 flex-grow">
+                        <h4 class="text-xl font-bold text-white mb-2 font-mono text-brand-purple">P4: Nexus</h4>
+                        <div class="text-4xl font-bold text-white mb-4">Custom</div>
+                        <p class="text-sm text-slate-400 mb-6 pb-6 border-b border-white/10">Bespoke integrations,
+                            on-prem deployment, and direct API framework access.</p>
+                        <ul class="space-y-4 mb-8 text-sm text-slate-300">
+                            <li class="flex items-start"><i
+                                    class="fa-solid fa-microchip text-brand-purple mt-1 mr-3 w-4"></i> <span>Custom LLM
+                                    Training</span></li>
+                            <li class="flex items-start"><i
+                                    class="fa-solid fa-server text-brand-purple mt-1 mr-3 w-4"></i> <span>On-Premise
+                                    Agents</span></li>
+                            <li class="flex items-start"><i
+                                    class="fa-solid fa-user-ninja text-brand-purple mt-1 mr-3 w-4"></i> <span>Physical
+                                    Social Engineering</span></li>
+                            <li class="flex items-start"><i
+                                    class="fa-solid fa-code text-brand-purple mt-1 mr-3 w-4"></i> <span>Deep CI/CD
+                                    Integration</span></li>
+                            <li class="flex items-start"><i
+                                    class="fa-solid fa-user-shield text-brand-purple mt-1 mr-3 w-4"></i> <span>Executive
+                                    Protection</span></li>
+                        </ul>
+                    </div>
+                    <a href="contact.html"
+                        class="text-center w-full py-3 bg-brand-purple/10 hover:bg-brand-purple/20 text-white font-mono text-sm border border-brand-purple/50 rounded transition-colors relative z-10 mt-auto">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison Matrix -->
+    <section class="py-24 px-6 relative z-10 bg-brand-darker border-t border-b border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-white mb-4">Feature Comparison Matrix</h2>
+                <p class="text-slate-400">Detailed breakdown of capabilities by deployment tier.</p>
+            </div>
+
+            <div class="overflow-x-auto reveal delay-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b-2 border-brand-cyan/30 text-white font-mono text-sm bg-black/40">
+                            <th class="p-4 w-1/3">Feature / Capability</th>
+                            <th class="p-4 text-center">P1: Startup</th>
+                            <th class="p-4 text-center bg-brand-cyan/10 text-brand-cyan border-t-2 border-brand-cyan">
+                                P2: Growth</th>
+                            <th class="p-4 text-center">P3: Enterprise</th>
+                            <th class="p-4 text-center">P4: Nexus</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-300 divide-y divide-white/5">
+
+                        <!-- Core Category -->
+                        <tr class="bg-black/80">
+                            <td colspan="5" class="p-4 font-bold text-white uppercase tracking-wider text-xs font-mono">
+                                <i class="fa-solid fa-crosshairs text-brand-cyan mr-2"></i> Offensive Operations</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">AI Vulnerability Scanning</td>
+                            <td class="p-4 text-center text-slate-500">Weekly</td>
+                            <td class="p-4 text-center text-white bg-brand-cyan/5">Daily</td>
+                            <td class="p-4 text-center text-brand-cyan font-bold">Real-time</td>
+                            <td class="p-4 text-center text-brand-cyan font-bold">Real-time</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">Human Penetration Testing</td>
+                            <td class="p-4 text-center text-slate-500">Quarterly</td>
+                            <td class="p-4 text-center text-white bg-brand-cyan/5">Monthly</td>
+                            <td class="p-4 text-center text-brand-cyan font-bold">Continuous</td>
+                            <td class="p-4 text-center text-brand-cyan font-bold">Continuous</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">Physical Security / Social Engineering</td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-minus text-slate-700"></i></td>
+                            <td class="p-4 text-center bg-brand-cyan/5"><i class="fa-solid fa-minus text-slate-700"></i>
+                            </td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-minus text-slate-700"></i></td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-check text-brand-purple"></i></td>
+                        </tr>
+
+                        <!-- Defense Category -->
+                        <tr class="bg-black/80">
+                            <td colspan="5" class="p-4 font-bold text-white uppercase tracking-wider text-xs font-mono">
+                                <i class="fa-solid fa-shield-halved text-brand-cyan mr-2"></i> Defensive Posture</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">Cloud Posture Management (CSPM)</td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-minus text-slate-700"></i></td>
+                            <td class="p-4 text-center bg-brand-cyan/5"><i
+                                    class="fa-solid fa-check text-brand-cyan"></i></td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-check text-brand-cyan"></i></td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-check text-brand-cyan"></i></td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">Dark Web Intel & Brand Monitoring</td>
+                            <td class="p-4 text-center text-slate-500">Alerts Only</td>
+                            <td class="p-4 text-center text-white bg-brand-cyan/5">Basic Intel</td>
+                            <td class="p-4 text-center text-brand-cyan">Full Spectrum</td>
+                            <td class="p-4 text-center text-brand-cyan">Full Spectrum + Takedowns</td>
+                        </tr>
+
+                        <!-- Support Category -->
+                        <tr class="bg-black/80">
+                            <td colspan="5" class="p-4 font-bold text-white uppercase tracking-wider text-xs font-mono">
+                                <i class="fa-solid fa-headset text-brand-cyan mr-2"></i> Support & SLA</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">Incident Response SLA</td>
+                            <td class="p-4 text-center text-slate-500">24 Hours</td>
+                            <td class="p-4 text-center text-white bg-brand-cyan/5">4 Hours</td>
+                            <td class="p-4 text-center text-red-400 font-bold">1 Hour</td>
+                            <td class="p-4 text-center text-red-500 font-bold">15 Minutes</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4">Account Management</td>
+                            <td class="p-4 text-center text-slate-500">Shared Output</td>
+                            <td class="p-4 text-center text-white bg-brand-cyan/5">Shared Output</td>
+                            <td class="p-4 text-center text-brand-cyan">Dedicated Pod</td>
+                            <td class="p-4 text-center text-brand-purple">Dedicated vCISO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto reveal">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
+
+            <div class="space-y-6">
+                <div
+                    class="bg-slate-900/40 border border-white/10 p-6 rounded-lg hover:border-brand-cyan/50 transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-2"><i
+                            class="fa-solid fa-chevron-right text-brand-cyan text-sm mr-2"></i> How quickly can P2/P3 be
+                        deployed?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-6">Our automated AI assets begin scanning your
+                        perimeter within 15 minutes of onboarding. Human operative assignments for deep penetration
+                        testing typically commence within 48 to 72 hours, depending on scope and authorization
+                        approvals.</p>
+                </div>
+
+                <div
+                    class="bg-slate-900/40 border border-white/10 p-6 rounded-lg hover:border-brand-cyan/50 transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-2"><i
+                            class="fa-solid fa-chevron-right text-brand-cyan text-sm mr-2"></i> Do you offer annual
+                        billing discounts?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-6">Yes. All tiers are eligible for a 15%
+                        discount if billed annually upfront. We also provide multi-year lock-in rates for Enterprise and
+                        Nexus clients.</p>
+                </div>
+
+                <div
+                    class="bg-slate-900/40 border border-white/10 p-6 rounded-lg hover:border-brand-cyan/50 transition-colors border-l-4 border-l-red-500">
+                    <h3 class="text-white font-bold mb-2 flex items-center justify-between">
+                        <span><i class="fa-solid fa-chevron-right text-red-500 text-sm mr-2"></i> What if we are
+                            currently under attack?</span>
+                        <span
+                            class="text-xs bg-red-500/20 text-red-500 px-2 py-1 rounded border border-red-500/50 flash-text">URGENT</span>
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-6">If you are experiencing an active breach or
+                        ransomware event, do not use standard onboarding. Immediately navigate to our <a
+                            href="weareinattck.html"
+                            class="text-red-400 hover:text-red-300 underline underline-offset-4">Active Breach Response
+                            Center</a> for rapid deployment under P3/P4 protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <a href="index.html" class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+                    <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+                </a>
+                <p class="text-slate-500 text-sm max-w-sm font-light">
+                    The next evolution in cybersecurity. We combine specialized artificial intelligence with elite human
+                    expertise to secure the interconnected future.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Navigation</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Operational Matrix</a>
+                    </li>
+                    <li><a href="Pricing.html" class="text-brand-cyan transition-colors font-bold">Investment Tiers
+                            (Pricing)</a></li>
+                    <li><a href="aboutus.html" class="hover:text-brand-cyan transition-colors">The AI+Human
+                            Advantage</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Request Consultation</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Command Center</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Dashboard Login</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">API Documentation</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Threat Advisories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-mono">
+            <p>&copy; 2026 Crooksec Intelligence. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

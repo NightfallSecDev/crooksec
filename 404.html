@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Sector Not Found | Crooksec</title>
+    <!-- Custom JS (Config & Interactions) -->
+    <script src="main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-darker relative overflow-x-hidden min-h-screen flex flex-col bg-brand-darker text-white">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] bg-brand-darker"></div>
+    <div class="fixed inset-0 z-[-1] bg-grid opacity-20"></div>
+    <div
+        class="parallax-bg fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-red-500/10 blur-[120px] rounded-full mix-blend-screen z-[-1] pointer-events-none" data-speed="20">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/10 bg-brand-darker/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 transition-transform hover:scale-105">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl"></i>
+                <span class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">/CASE_STUDIES</a>
+                <div class="relative group">
+                    <button class="hover:text-brand-cyan transition-colors flex items-center gap-1">
+                        /PARTNERS <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-brand-darker border border-white/10 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                        <a href="patner.html" class="block px-4 py-2 hover:bg-brand-cyan/10 hover:text-brand-cyan text-sm">Partner Network</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors">/CONTACT</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="weareinattck.html"
+                    class="hidden md:inline-flex px-4 py-2 border border-red-500 text-red-500 hover:bg-red-500/10 rounded-sm font-mono text-xs font-bold transition-all uppercase flash-text urgent-pulse">
+                    <i class="fa-solid fa-radiation mr-2"></i> Active Breach
+                </a>
+                <a href="contact.html"
+                    class="btn-scan hidden sm:inline-flex px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
+            <div class="flex flex-col gap-4 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/CASE_STUDIES</a>
+                <a href="patner.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PARTNER_NETWORK</a>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors py-2">/CONTACT</a>
+                <a href="contact.html" class="btn-scan w-full mt-2 px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all text-center">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-6 relative z-10 pt-32 pb-20">
+        <div class="max-w-3xl mx-auto text-center reveal">
+            <!-- 404 Glitch Effect -->
+            <div class="relative inline-block mb-8 group">
+                <div class="text-[150px] md:text-[200px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-brand-cyan to-brand-blue font-mono leading-none select-none glitch-effect" data-text="404">
+                    404
+                </div>
+                <div class="absolute inset-0 bg-brand-cyan/20 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-500 z-[-1]"></div>
+            </div>
+
+            <!-- Error Message -->
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Sector Not Found
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl font-mono mb-10 max-w-2xl mx-auto">
+                <span class="text-red-500"><i class="fa-solid fa-triangle-exclamation mr-2"></i>ERROR:</span> The requested resource has been moved, deleted, or you do not have sufficient clearance to access this node.
+            </p>
+
+            <!-- Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="index.html" class="w-full sm:w-auto px-8 py-4 bg-brand-cyan hover:bg-brand-cyan/90 text-brand-darker font-bold rounded shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-house"></i> Return to Base
+                </a>
+                <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white text-center font-mono text-sm rounded transition-colors border border-white/10 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-headset"></i> Report Incident
+                </a>
+            </div>
+
+            <!-- Terminal Decal -->
+            <div class="mt-16 text-left max-w-md mx-auto bg-black/50 border border-white/10 p-4 rounded-lg font-mono text-xs text-slate-500 shadow-xl">
+                <div class="flex items-center gap-2 mb-2 pb-2 border-b border-white/5">
+                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                    <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span class="ml-2">system_log.txt</span>
+                </div>
+                <div class="terminal-type" data-type-speed="20">> Attempting to resolve endpoint...</div>
+                <div class="text-red-400 terminal-type" data-type-speed="30">> 404: Node Unreachable</div>
+                <div class="terminal-type" data-type-speed="15">> Initiating trace route...</div>
+                <div class="terminal-type" data-type-speed="10">> Connection severed by host.</div>
+                <div class="animate-pulse">> _</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+                    <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+                </div>
+                <p class="text-slate-500 text-sm max-w-sm font-light">
+                    The next evolution in cybersecurity. We combine specialized artificial intelligence with elite human
+                    expertise to secure the interconnected future.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Navigation</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Operational Matrix</a></li>
+                    <li><a href="Pricing.html" class="hover:text-brand-cyan transition-colors">Investment Tiers</a></li>
+                    <li><a href="patner.html" class="hover:text-brand-cyan transition-colors">Partner Network</a></li>
+                    <li><a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">Case Studies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Command Center</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Dashboard Login</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">API Documentation</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Threat Advisories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-mono">
+            <p>&copy; 2026 Crooksec Intelligence. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

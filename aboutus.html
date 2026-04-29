@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Crooksec</title>
+    <meta name="description"
+        content="Discover the origins, mission, and the elite human-AI operatives behind Crooksec.">
+    <!-- Custom JS (Config & Interactions) -->
+    <script src="main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-darker relative overflow-x-hidden bg-brand-darker text-white">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] bg-brand-darker"></div>
+    <div class="fixed inset-0 z-[-1] bg-grid opacity-20"></div>
+    <div
+        class="parallax-bg fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-cyan/20 blur-[120px] rounded-full mix-blend-screen z-[-1] pointer-events-none" data-speed="20">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/10 bg-brand-darker/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 transition-transform hover:scale-105">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl"></i>
+                <span class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors">/SERVICES</a>
+                <a href="aboutus.html" class="text-brand-cyan transition-colors font-bold">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">/CASE_STUDIES</a>
+                <div class="relative group">
+                    <button class="hover:text-brand-cyan transition-colors flex items-center gap-1">
+                        /PARTNERS <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-brand-darker border border-white/10 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                        <a href="patner.html" class="block px-4 py-2 hover:bg-brand-cyan/10 hover:text-brand-cyan text-sm">Partner Network</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors">/CONTACT</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="btn-scan hidden sm:inline-flex px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
+            <div class="flex flex-col gap-4 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/SERVICES</a>
+                <a href="aboutus.html" class="text-brand-cyan transition-colors font-bold py-2 border-b border-white/5">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/CASE_STUDIES</a>
+                <a href="patner.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PARTNER_NETWORK</a>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors py-2">/CONTACT</a>
+                <a href="contact.html" class="btn-scan w-full mt-2 px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all text-center">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 lg:pt-52 lg:pb-24 overflow-hidden px-6 reveal">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-brand-cyan font-mono text-sm mb-4 uppercase tracking-widest">// THE_NEXUS_ORIGIN</h2>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-white">
+                Forged in the <br class="hidden sm:block"><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-purple">Digital
+                    Abyss</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 font-light leading-relaxed max-w-3xl mx-auto">
+                Crooksec was born from a fundamental realization: human analysts are too slow to counter automated
+                threats, and isolated AI lacks the strategic intuition to anticipate zero-days. We merged them.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission / The Paradigm Shift -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5 bg-black/40 overflow-hidden">
+        <!-- Background animated elements for the section -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+            <div class="absolute top-[20%] left-[10%] w-[300px] h-[300px] bg-brand-cyan/10 blur-[100px] rounded-full animate-pulse"
+                style="animation-duration: 4s;"></div>
+            <div class="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-brand-purple/10 blur-[120px] rounded-full animate-pulse"
+                style="animation-duration: 6s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal delay-100 relative z-10">
+                <h2 class="text-brand-purple font-mono text-sm mb-4 uppercase tracking-widest">// THE_PARADIGM_SHIFT
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Redefining the <br><span
+                        class="text-brand-purple">Security Paradigm</span></h3>
+                <div class="space-y-6 text-slate-400 font-light text-lg">
+                    <p>
+                        Legacy security models are fundamentally flawed. They rely on building higher static walls and
+                        reacting to alerts long after the perimeter has been breached. The result? Unmanageable alert
+                        fatigue, prolonged dwell times, and inevitable, catastrophic data exfiltration.
+                    </p>
+                    <p>
+                        Our mission is to permanently shift the battleground. By deploying continuous, autonomous
+                        offensive simulations against your own infrastructure, we don't just find vulnerabilities—we
+                        trace the exact kill chains adversaries would use. We identify, exploit, and remediate these
+                        attack vectors before threat actors even know they exist.
+                    </p>
+                    <p>
+                        We believe that true security is not a compliance checklist; it's an active, ongoing state of
+                        dominance over your attack surface.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-white/10">
+                        <div
+                            class="flex items-start gap-4 p-4 bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-lg group hover:border-brand-cyan/40 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-brand-cyan/10 border border-brand-cyan/30 rounded-full flex items-center justify-center text-brand-cyan group-hover:scale-110 group-hover:bg-brand-cyan group-hover:text-black transition-all duration-300">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold group-hover:text-brand-cyan transition-colors">Speed of
+                                    Automation</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Machine-speed anomaly detection
+                                    and instant, autonomous network isolation within milliseconds.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-start gap-4 p-4 bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-lg group hover:border-brand-purple/40 transition-all duration-500">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-brand-purple/10 border border-brand-purple/30 rounded-full flex items-center justify-center text-brand-purple group-hover:scale-110 group-hover:bg-brand-purple group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold group-hover:text-brand-purple transition-colors">Human
+                                    Intuition</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Elite former-intelligence
+                                    analysts interpreting complex, multi-stage behavioral anomalies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Abstract tech visualization with Animations -->
+            <div
+                class="relative reveal delay-300 transform perspective-1000 rotate-y-[-5deg] hover:rotate-y-0 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan/30 to-brand-purple/30 blur-3xl opacity-50 rounded-full animate-pulse"
+                    style="animation-duration: 3s;"></div>
+
+                <div
+                    class="relative bg-black/80 border border-brand-cyan/20 p-6 sm:p-8 rounded-xl shadow-[0_0_40px_rgba(6,182,212,0.1)] backdrop-blur-md overflow-hidden font-mono text-xs sm:text-sm h-[400px] flex flex-col group">
+
+                    <!-- decorative scanning line -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-brand-cyan/50 shadow-[0_0_10px_rgba(6,182,212,0.8)] z-50 animate-[scan_3s_linear_infinite]">
+                    </div>
+
+                    <!-- CSS for the scanline and typing -->
+                    <style>
+                        @keyframes scan {
+                            0% {
+                                top: 0;
+                                opacity: 0;
+                            }
+
+                            10% {
+                                opacity: 1;
+                            }
+
+                            90% {
+                                opacity: 1;
+                            }
+
+                            100% {
+                                top: 100%;
+                                opacity: 0;
+                            }
+                        }
+
+                        .typing-text-1 {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            border-right: 2px solid transparent;
+                            width: 0;
+                            animation: typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite;
+                        }
+
+                        .typing-text-2 {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: 0;
+                            animation: typing 2s steps(40, end) 2s forwards;
+                        }
+
+                        .typing-text-3 {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: 0;
+                            animation: typing 1s steps(20, end) 4s forwards;
+                        }
+
+                        .fade-in-text {
+                            opacity: 0;
+                            animation: fadeIn 1s ease-in 5s forwards;
+                        }
+
+                        @keyframes typing {
+                            from {
+                                width: 0
+                            }
+
+                            to {
+                                width: 100%
+                            }
+                        }
+
+                        @keyframes blink-caret {
+
+                            from,
+                            to {
+                                border-color: transparent
+                            }
+
+                            50% {
+                                border-color: rgba(6, 182, 212, 0.8);
+                            }
+                        }
+
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                    </style>
+
+                    <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-4 shrink-0">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/80 shadow-[0_0_10px_rgba(234,179,8,0.5)]">
+                            </div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/80 shadow-[0_0_10px_rgba(34,197,94,0.5)]">
+                            </div>
+                            <span class="ml-4 text-slate-400 text-xs">crooksec_core_engine.rs</span>
+                        </div>
+                        <div class="text-brand-cyan text-xs drop-shadow-[0_0_5px_rgba(6,182,212,0.8)] animate-pulse">
+                            LIVE_FEED</div>
+                    </div>
+
+                    <div class="text-slate-300 flex-grow relative z-10">
+                        <p class="typing-text-1 text-slate-500 mb-2">// Deploying autonomous countermeasures...</p>
+
+                        <div class="typing-text-2">
+                            <p><span class="text-brand-purple">let</span> ai_node = NeuralEngine::<span
+                                    class="text-brand-cyan drop-shadow-[0_0_2px_rgba(6,182,212,0.8)]">boot</span>();</p>
+                            <p><span class="text-brand-purple">let</span> overwatch = CommandCenter::<span
+                                    class="text-brand-cyan drop-shadow-[0_0_2px_rgba(6,182,212,0.8)]">connect</span>();
+                            </p>
+                            <p class="mt-2 text-slate-500">/* Analyzing 1,204,553 events/sec */</p>
+                        </div>
+
+                        <div class="typing-text-3 mt-2">
+                            <p><span class="text-brand-accent">if</span> ai_node.detect_anomaly() {</p>
+                            <p class="pl-4">overwatch.<span class="text-brand-cyan">isolate_vector</span>(Threat::APT);
+                            </p>
+                            <p>}</p>
+                        </div>
+
+                        <div class="fade-in-text mt-4 border-l-2 border-brand-purple pl-4 bg-brand-purple/5 py-2">
+                            <p class="text-brand-purple">WARNING: Lateral movement detected.</p>
+                            <p class="text-slate-400">Executing: <span
+                                    class="text-white">Matrix::enforce_zero_trust();</span></p>
+                        </div>
+
+                        <div
+                            class="fade-in-text mt-auto absolute bottom-0 left-0 w-full flex items-center justify-between border-t border-brand-cyan/20 pt-4 bg-black/50 backdrop-blur pb-2">
+                            <div class="flex items-center gap-2 text-brand-cyan font-bold mx-4">
+                                <span class="animate-pulse">></span> <span
+                                    class="bg-brand-cyan/10 px-2 py-1 border border-brand-cyan/30 rounded text-xs tracking-widest text-[#00ffcc] shadow-[0_0_15px_rgba(0,255,204,0.4)]">SYSTEM_SECURED</span>
+                            </div>
+                            <div class="text-slate-500 text-[10px] mx-4">LATENCY: 12ms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership / Elite Operatives -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-purple font-mono text-sm mb-2 uppercase tracking-widest">// TARGET_IDENTIFICATION
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-4">The Architects</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto font-light">We don't hire standard engineers. We assemble
+                    elite offensive security researchers, former intelligence operatives, and ML pioneers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Operative 1 -->
+                <div
+                    class="bg-black/40 border border-white/5 p-8 rounded-xl hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 group card-hover reveal delay-100 relative overflow-hidden">
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-cyan/10 rounded-full blur-3xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="w-20 h-20 mb-6 rounded-full bg-gradient-to-tr from-slate-900 to-slate-800 border border-brand-cyan/30 flex items-center justify-center relative z-10 shadow-[0_0_15px_rgba(6,182,212,0.15)] group-hover:shadow-[0_0_25px_rgba(6,182,212,0.3)] transition-all">
+                        <i
+                            class="fa-solid fa-user-secret text-3xl text-brand-cyan group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h4
+                        class="text-xl font-bold text-white mb-1 group-hover:text-brand-cyan transition-colors relative z-10">
+                        Cipher</h4>
+                    <p class="text-brand-cyan font-mono text-xs mb-4 relative z-10">Founder & Lead Architect</p>
+                    <p class="text-slate-400 text-sm leading-relaxed relative z-10">
+                        Former state-sponsored threat researcher turned defender. Specializes in low-level exploit
+                        development and global dark web intelligence gathering.
+                    </p>
+                    <div class="mt-8 pt-4 border-t border-white/10 flex gap-4 text-slate-500 relative z-10">
+                        <i class="fa-brands fa-github hover:text-white transition-colors cursor-pointer text-lg"></i>
+                        <i class="fa-brands fa-x-twitter hover:text-white transition-colors cursor-pointer text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- Operative 2 -->
+                <div
+                    class="bg-black/40 border border-white/5 p-8 rounded-xl hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 group card-hover reveal delay-200 relative overflow-hidden md:-translate-y-4">
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-purple/10 rounded-full blur-3xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="w-20 h-20 mb-6 rounded-full bg-gradient-to-tr from-slate-900 to-slate-800 border border-brand-purple/30 flex items-center justify-center relative z-10 shadow-[0_0_15px_rgba(139,92,246,0.15)] group-hover:shadow-[0_0_25px_rgba(139,92,246,0.3)] transition-all">
+                        <i
+                            class="fa-solid fa-microchip text-3xl text-brand-purple group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h4
+                        class="text-xl font-bold text-white mb-1 group-hover:text-brand-purple transition-colors relative z-10">
+                        Aura</h4>
+                    <p class="text-brand-purple font-mono text-xs mb-4 relative z-10">Head of AI Defense</p>
+                    <p class="text-slate-400 text-sm leading-relaxed relative z-10">
+                        Pioneer in applying transformer models to behavioral anomaly detection. Ensures our autonomous
+                        systems adapt faster than emerging zero-days.
+                    </p>
+                    <div class="mt-8 pt-4 border-t border-white/10 flex gap-4 text-slate-500 relative z-10">
+                        <i class="fa-brands fa-github hover:text-white transition-colors cursor-pointer text-lg"></i>
+                        <i class="fa-brands fa-linkedin hover:text-white transition-colors cursor-pointer text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- Operative 3 -->
+                <div
+                    class="bg-black/40 border border-white/5 p-8 rounded-xl hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 group card-hover reveal delay-300 relative overflow-hidden">
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-accent/10 rounded-full blur-3xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="w-20 h-20 mb-6 rounded-full bg-gradient-to-tr from-slate-900 to-slate-800 border border-brand-accent/30 flex items-center justify-center relative z-10 shadow-[0_0_15px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all">
+                        <i
+                            class="fa-solid fa-crosshairs text-3xl text-brand-accent group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h4
+                        class="text-xl font-bold text-white mb-1 group-hover:text-brand-accent transition-colors relative z-10">
+                        Specter</h4>
+                    <p class="text-brand-accent font-mono text-xs mb-4 relative z-10">Director of Offensive Operations
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed relative z-10">
+                        Leads the red team unconstrained engagements. Expert in physical social engineering, SCADA
+                        network exploitation, and supply chain poisoning.
+                    </p>
+                    <div class="mt-8 pt-4 border-t border-white/10 flex gap-4 text-slate-500 relative z-10">
+                        <i class="fa-brands fa-github hover:text-white transition-colors cursor-pointer text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Vision -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5 bg-brand-darker">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-brand-cyan font-mono text-sm mb-4 uppercase tracking-widest">// FUTURE_STATE</h2>
+            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6">Our <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-purple">Vision</span>
+            </h3>
+            <p class="text-lg md:text-xl text-slate-400 font-light leading-relaxed">
+                To create a digital ecosystem where offensive innovation is outpaced by autonomous defensive operations,
+                rendering cyber attacks economically unviable for threat actors. We envision a zero-breach future
+                powered by the ultimate synthesis of human intelligence and machine scale.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5 bg-black/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-purple font-mono text-sm mb-2 uppercase tracking-widest">// OPERATIONAL_VECTORS
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-4">Our Core Capabilities</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto font-light">The fundamental pillars of our security matrix.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Capability 1 -->
+                <div
+                    class="bg-black/60 border border-white/10 p-6 rounded-xl hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all group reveal delay-100 card-hover flex flex-col h-full">
+                    <i
+                        class="fa-solid fa-crosshairs text-3xl text-brand-cyan mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-white font-bold mb-2">Offensive Research</h4>
+                    <p class="text-slate-400 text-sm flex-grow">Continuous discovery of zero-days and novel attack
+                        vectors before they are weaponized. We map the dark web to understand APT methodologies.</p>
+                    <ul class="mt-4 space-y-2 font-mono text-xs text-slate-500 border-t border-white/10 pt-4">
+                        <li><span class="text-brand-cyan mr-1">></span> Exploit Dev</li>
+                        <li><span class="text-brand-cyan mr-1">></span> Reverse Engineering</li>
+                    </ul>
+                </div>
+                <!-- Capability 2 -->
+                <div
+                    class="bg-black/60 border border-white/10 p-6 rounded-xl hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all group reveal delay-200 card-hover flex flex-col h-full">
+                    <i
+                        class="fa-solid fa-shield-virus text-3xl text-brand-purple mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-white font-bold mb-2">Defensive Engineering</h4>
+                    <p class="text-slate-400 text-sm flex-grow">Architecting zero-trust environments and self-healing
+                        infrastructure topologies that actively trap, isolate, and neutralize lateral movement.</p>
+                    <ul class="mt-4 space-y-2 font-mono text-xs text-slate-500 border-t border-white/10 pt-4">
+                        <li><span class="text-brand-purple mr-1">></span> Zero-Trust Architecture</li>
+                        <li><span class="text-brand-purple mr-1">></span> Network Micro-Segmentation</li>
+                    </ul>
+                </div>
+                <!-- Capability 3 -->
+                <div
+                    class="bg-black/60 border border-white/10 p-6 rounded-xl hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all group reveal delay-300 card-hover flex flex-col h-full">
+                    <i
+                        class="fa-solid fa-network-wired text-3xl text-brand-accent mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-white font-bold mb-2">AI Threat Modeling</h4>
+                    <p class="text-slate-400 text-sm flex-grow">Predictive algorithms that map millions of attack paths
+                        and calculate potential blast radiuses in milliseconds to prioritize patching.</p>
+                    <ul class="mt-4 space-y-2 font-mono text-xs text-slate-500 border-t border-white/10 pt-4">
+                        <li><span class="text-brand-accent mr-1">></span> Neural Heuristics</li>
+                        <li><span class="text-brand-accent mr-1">></span> Automated Triage</li>
+                    </ul>
+                </div>
+                <!-- Capability 4 -->
+                <div
+                    class="bg-black/60 border border-white/10 p-6 rounded-xl hover:border-white/50 hover:bg-white/5 transition-all group reveal delay-400 card-hover flex flex-col h-full">
+                    <i
+                        class="fa-solid fa-globe text-3xl text-slate-300 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-white font-bold mb-2">Global Intelligence</h4>
+                    <p class="text-slate-400 text-sm flex-grow">Real-time telemetry and dark web monitoring to
+                        anticipate adversary movements and intercept compromised credentials before use.</p>
+                    <ul class="mt-4 space-y-2 font-mono text-xs text-slate-500 border-t border-white/10 pt-4">
+                        <li><span class="text-slate-300 mr-1">></span> OSINT & HUMINT</li>
+                        <li><span class="text-slate-300 mr-1">></span> Credential Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Protect -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5 bg-brand-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-cyan font-mono text-sm mb-4 uppercase tracking-widest">// DEPLOYMENT_ZONES</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Industries We <span
+                        class="text-brand-cyan">Protect</span></h3>
+                <p class="text-slate-400 font-light mb-8 max-w-3xl mx-auto">
+                    Threat actors don't discriminate, but they do specialize. We tailor our defensive matrices to the
+                    unique regulatory, operational, and technological demands of critical sectors globally.
+                </p>
+                <a href="service.html"
+                    class="inline-flex items-center gap-2 px-6 py-3 border border-brand-cyan/30 text-brand-cyan font-mono text-sm rounded hover:bg-brand-cyan/10 transition-all">
+                    View Sector Specific Solutions <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="bg-black/40 border border-white/10 p-8 rounded-xl hover:border-brand-cyan/40 hover:-translate-y-2 transition-all group reveal delay-100 card-hover">
+                    <i
+                        class="fa-solid fa-building-columns text-4xl text-slate-600 group-hover:text-brand-cyan transition-colors mb-6 block"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Financial Services</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Securing core banking platforms, payment gateways,
+                        and fintech apps against wire fraud, SWIFT network attacks, and compliance breaches (PCI-DSS).
+                    </p>
+                </div>
+                <div
+                    class="bg-black/40 border border-white/10 p-8 rounded-xl hover:border-brand-cyan/40 hover:-translate-y-2 transition-all group reveal delay-200 card-hover">
+                    <i
+                        class="fa-solid fa-heart-pulse text-4xl text-slate-600 group-hover:text-brand-cyan transition-colors mb-6 block"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Healthcare & Biotech</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Protecting PHI data, securing IoMT (medical
+                        devices), and ensuring HIPAA/HITRUST compliance against debilitating ransomware variants.</p>
+                </div>
+                <div
+                    class="bg-black/40 border border-white/10 p-8 rounded-xl hover:border-brand-cyan/40 hover:-translate-y-2 transition-all group reveal delay-300 card-hover">
+                    <i
+                        class="fa-solid fa-industry text-4xl text-slate-600 group-hover:text-brand-cyan transition-colors mb-6 block"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Critical Infrastructure</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Defending SCADA, ICS, and energy grids from
+                        state-sponsored disruption. Air-gapped network penetration testing and physical-cyber modeling.
+                    </p>
+                </div>
+                <div
+                    class="bg-black/40 border border-white/10 p-8 rounded-xl hover:border-brand-cyan/40 hover:-translate-y-2 transition-all group reveal delay-400 card-hover">
+                    <i
+                        class="fa-solid fa-microchip text-4xl text-slate-600 group-hover:text-brand-cyan transition-colors mb-6 block"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Technology & SaaS</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Securing the CI/CD pipeline, cloud
+                        misconfigurations (AWS/GCP/Azure), and conducting deep-dive API vulnerability assessments.</p>
+                </div>
+                <div
+                    class="bg-black/40 border border-white/10 p-8 rounded-xl hover:border-brand-cyan/40 hover:-translate-y-2 transition-all group reveal delay-500 card-hover">
+                    <i
+                        class="fa-solid fa-shield-quartered text-4xl text-slate-600 group-hover:text-brand-cyan transition-colors mb-6 block"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Public Sector & Defense</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Assisting government bodies and defense
+                        contractors in achieving CMMC compliance, countering cyber-espionage, and supply chain threats.
+                    </p>
+                </div>
+                <div
+                    class="bg-black/40 border border-white/10 p-8 rounded-xl hover:border-brand-cyan/40 hover:-translate-y-2 transition-all group reveal delay-600 card-hover">
+                    <i
+                        class="fa-solid fa-cart-shopping text-4xl text-slate-600 group-hover:text-brand-cyan transition-colors mb-6 block"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">E-Commerce & Retail</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Mitigating digital skimming (Magecart), credential
+                        stuffing attacks, and guarding customer PII during high-volume traffic events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confidentiality & Ethics -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5 bg-black/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center mb-16">
+                <div class="md:col-span-1 flex justify-center reveal delay-100">
+                    <div
+                        class="w-48 h-48 rounded-full border border-brand-purple/20 bg-brand-purple/5 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-brand-purple/20 blur-2xl rounded-full animate-pulse"></div>
+                        <i class="fa-solid fa-user-secret text-6xl text-brand-purple relative z-10"></i>
+                    </div>
+                </div>
+                <div class="md:col-span-2 reveal delay-200">
+                    <h2 class="text-brand-purple font-mono text-sm mb-4 uppercase tracking-widest">// OPSEC_DIRECTIVE
+                    </h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Confidentiality & Ethics</h3>
+                    <p class="text-slate-400 font-light mb-6 text-lg">
+                        We operate in the shadows, but our ethics are unconditionally transparent. The nature of our
+                        work grants us access to our clients' most catastrophic vulnerabilities, necessitating an
+                        unbreakable chain of trust. Crooksec adheres strictly to international cyber law and operates
+                        under rigorous non-disclosure agreements (NDAs) that far exceed industry standards.
+                    </p>
+                    <ul class="space-y-4 font-mono text-sm text-slate-300">
+                        <li class="flex items-center"><span
+                                class="w-8 h-8 rounded-full bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center mr-4 shrink-0"><i
+                                    class="fa-solid fa-check text-brand-purple"></i></span> Strict Zero-Knowledge
+                            Architecture internal communications</li>
+                        <li class="flex items-center"><span
+                                class="w-8 h-8 rounded-full bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center mr-4 shrink-0"><i
+                                    class="fa-solid fa-check text-brand-purple"></i></span> Client-Side Encryption
+                            Implementation for all vulnerability reports</li>
+                        <li class="flex items-center"><span
+                                class="w-8 h-8 rounded-full bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center mr-4 shrink-0"><i
+                                    class="fa-solid fa-check text-brand-purple"></i></span> Verified Discretion &
+                            Absolute Operational Security</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Compliance Standards Row -->
+            <div class="pt-12 border-t border-white/5 reveal delay-300">
+                <p class="text-center font-mono text-sm text-slate-500 mb-8 uppercase tracking-widest">Adhering To
+                    Global Compliance Standards</p>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-8 opacity-60">
+                    <div
+                        class="px-6 py-3 border border-white/20 rounded font-bold text-white tracking-widest text-lg bg-white/5">
+                        SOC 2 TYPE II</div>
+                    <div
+                        class="px-6 py-3 border border-white/20 rounded font-bold text-white tracking-widest text-lg bg-white/5">
+                        ISO 27001</div>
+                    <div
+                        class="px-6 py-3 border border-white/20 rounded font-bold text-white tracking-widest text-lg bg-white/5">
+                        GDPR</div>
+                    <div
+                        class="px-6 py-3 border border-white/20 rounded font-bold text-white tracking-widest text-lg bg-white/5">
+                        HIPAA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Crooksec Different -->
+    <section class="py-24 px-6 relative z-10 border-t border-white/5 bg-brand-darker">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="reveal mb-16">
+                <h2 class="text-brand-accent font-mono text-sm mb-2 uppercase tracking-widest">// COMPETITIVE_ADVANTAGE
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-4">Why We Are Different</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto font-light">The legacy MSSP model is broken. We built the
+                    alternative.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-black/20 p-6 rounded-xl border border-white/5 hover:border-brand-accent/30 transition-all reveal delay-100 card-hover h-full flex flex-col">
+                    <div class="text-brand-accent font-mono text-5xl font-bold opacity-30 mb-4 text-left">01</div>
+                    <h4 class="text-lg font-bold text-white mb-3 text-left">Unconstrained Testing</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed text-left flex-grow">We don't just run automated
+                        scans and hand you a PDF. Our red teams mimic advanced persistent threats (APTs), utilizing
+                        custom physical intrusion hardware and zero-day development to truly test your infrastructure
+                        limits.</p>
+                </div>
+                <div
+                    class="bg-black/20 p-6 rounded-xl border border-white/5 hover:border-brand-accent/30 transition-all reveal delay-200 card-hover h-full flex flex-col">
+                    <div class="text-brand-accent font-mono text-5xl font-bold opacity-30 mb-4 text-left">02</div>
+                    <h4 class="text-lg font-bold text-white mb-3 text-left">The AI Amplifier</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed text-left flex-grow">Unlike companies that tack on
+                        "AI" for marketing, our core engine was built machine-learning-first. Our neural nets do the
+                        heavy lifting at million-event scales, meaning our human analysts focus solely on complex
+                        strategy.</p>
+                </div>
+                <div
+                    class="bg-black/20 p-6 rounded-xl border border-white/5 hover:border-brand-accent/30 transition-all reveal delay-300 card-hover h-full flex flex-col">
+                    <div class="text-brand-accent font-mono text-5xl font-bold opacity-30 mb-4 text-left">03</div>
+                    <h4 class="text-lg font-bold text-white mb-3 text-left">Actionable Remediation</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed text-left flex-grow">We never leave you with a
+                        problem. For every vulnerability we exploit, we provide exact code-level patches, architecture
+                        redesigns, and autonomous policy enforcements to ensure the door is securely locked behind us.
+                    </p>
+                </div>
+                <div
+                    class="bg-black/20 p-6 rounded-xl border border-white/5 hover:border-brand-accent/30 transition-all reveal delay-400 card-hover h-full flex flex-col">
+                    <div class="text-brand-accent font-mono text-5xl font-bold opacity-30 mb-4 text-left">04</div>
+                    <h4 class="text-lg font-bold text-white mb-3 text-left">Decentralized Operations</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed text-left flex-grow">Our global network of analysts
+                        and autonomous nodes ensures that an attack on any single vector cannot take our overwatch
+                        offline. We offer a resilient, highly available defense matrix that never sleeps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact / Stats -->
+    <section class="py-16 px-6 relative z-10 border-t border-white/5 bg-black/80">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 divide-x divide-white/5 border-l border-r border-white/5">
+                <div class="text-center reveal delay-100 px-4">
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2 font-mono">24<span
+                            class="text-brand-cyan">/</span>7</div>
+                    <div class="text-slate-500 text-xs md:text-sm font-mono uppercase tracking-wider">Continuous
+                        Overwatch</div>
+                </div>
+                <div class="text-center reveal delay-200 px-4">
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2 font-mono">1.2<span
+                            class="text-brand-purple">B</span>+</div>
+                    <div class="text-slate-500 text-xs md:text-sm font-mono uppercase tracking-wider">Events Analyzed
+                        Daily</div>
+                </div>
+                <div class="text-center reveal delay-300 px-4 hidden sm:block">
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2 font-mono">15<span
+                            class="text-brand-accent">ms</span></div>
+                    <div class="text-slate-500 text-xs md:text-sm font-mono uppercase tracking-wider">Avg AI Response
+                    </div>
+                </div>
+                <div class="text-center reveal delay-400 px-4 hidden sm:block">
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2 font-mono">0<span
+                            class="text-brand-cyan"></span></div>
+                    <div class="text-slate-500 text-xs md:text-sm font-mono uppercase tracking-wider">Breaches
+                        Exfiltrated</div>
+                </div>
+            </div>
+            <!-- Mobile Fallback for 3rd and 4th -->
+            <div
+                class="grid grid-cols-2 gap-8 md:gap-12 sm:hidden mt-8 divide-x divide-white/5 border-l border-r border-white/5">
+                <div class="text-center reveal delay-300 px-4">
+                    <div class="text-3xl font-bold text-white mb-2 font-mono">15<span
+                            class="text-brand-accent">ms</span></div>
+                    <div class="text-slate-500 text-xs font-mono uppercase tracking-wider">Avg AI Response</div>
+                </div>
+                <div class="text-center reveal delay-400 px-4">
+                    <div class="text-3xl font-bold text-white mb-2 font-mono">0<span class="text-brand-cyan"></span>
+                    </div>
+                    <div class="text-slate-500 text-xs font-mono uppercase tracking-wider">Breaches Escaped</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action block -->
+    <section
+        class="py-24 relative z-10 px-6 border-t border-white/5 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-cyan/10 via-brand-darker to-brand-darker">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Shift <span class="text-brand-cyan">Your
+                    Posture?</span></h2>
+            <p class="text-slate-400 mb-8 max-w-2xl mx-auto font-light">Join the vanguard of secure organizations.
+                Contact our deployment team for a classified briefing on our capabilities.</p>
+            <a href="contact.html"
+                class="inline-flex items-center gap-3 px-8 py-4 bg-brand-cyan hover:bg-brand-cyan/90 text-brand-darker font-bold rounded shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all">
+                Initiate Secure Channel <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+                    <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+                </div>
+                <p class="text-slate-500 text-sm max-w-sm font-light">
+                    The next evolution in cybersecurity. We combine specialized artificial intelligence with elite human
+                    expertise to secure the interconnected future.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Navigation</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Operational Matrix
+                            (Services)</a></li>
+                    <li><a href="service.html#pricing" class="hover:text-brand-cyan transition-colors">Investment Tiers
+                            (Pricing)</a></li>
+                    <li><a href="aboutus.html" class="hover:text-brand-cyan transition-colors">The AI+Human
+                            Advantage</a></li>
+                    <li><a href="aboutus.html" class="text-brand-cyan transition-colors">About Crooksec</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Request Consultation</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Command Center</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Dashboard Login</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">API Documentation</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Threat Advisories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-mono">
+            <p>&copy; 2026 Crooksec Intelligence. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize any scroll animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof ScrollReveal !== 'undefined') {
+                ScrollReveal().reveal('.reveal', { delay: 200, duration: 800, distance: '50px', origin: 'bottom', reset: false });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Crooksec</title>
+    <meta name="description" content="Establish a secure connection with Crooksec's elite human + AI operatives.">
+    <!-- Custom JS (Config & Interactions) -->
+    <script src="main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-darker relative overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] bg-brand-darker"></div>
+    <div class="fixed inset-0 z-[-1] bg-grid opacity-20"></div>
+    <div
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-cyan/10 blur-[150px] rounded-full mix-blend-screen z-[-1] pointer-events-none">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/10 bg-brand-darker/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl"></i>
+                <a href="index.html" class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</a>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">/CASE_STUDIES</a>
+                <div class="relative group">
+                    <button class="hover:text-brand-cyan transition-colors flex items-center gap-1">
+                        /PARTNERS <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-brand-darker border border-white/10 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                        <a href="patner.html" class="block px-4 py-2 hover:bg-brand-cyan/10 hover:text-brand-cyan text-sm">Partner Network</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="text-brand-cyan transition-colors font-bold">/CONTACT</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="btn-scan hidden sm:inline-flex px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
+            <div class="flex flex-col gap-4 text-sm font-mono text-slate-300">
+                <a href="service.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/CASE_STUDIES</a>
+                <a href="patner.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PARTNER_NETWORK</a>
+                <a href="contact.html" class="text-brand-cyan transition-colors font-bold py-2">/CONTACT</a>
+                <a href="contact.html" class="btn-scan w-full mt-2 px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all text-center">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-24 relative z-10 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Header Section -->
+            <div class="text-center mb-16 reveal delay-100">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 text-brand-accent text-xs font-mono mb-6 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    COMM_CHANNEL: OPEN
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Establish <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-purple">Secure
+                        Connection</span>
+                </h1>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                    Whether you need an immediate incident response or a comprehensive security assessment, our
+                    operatives are standing by to lock down your perimeter.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mt-12">
+
+                <!-- Contact Info Panel (Left) -->
+                <div class="lg:col-span-5 space-y-6 reveal delay-200">
+                    <h3 class="text-xl font-mono text-white mb-8 border-b border-white/10 pb-4">// DIRECT_LINKS</h3>
+
+                    <div
+                        class="bg-black/50 border border-brand-cyan/20 p-6 rounded-lg group hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all card-hover">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded bg-brand-cyan/10 flex items-center justify-center text-brand-cyan group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1 uppercase text-slate-400">Primary Channel
+                                </h4>
+                                <a href="mailto:ops@crooksec.com"
+                                    class="text-xl font-bold text-white group-hover:text-brand-cyan transition-colors">ops@crooksec.com</a>
+                                <p class="text-sm text-slate-500 mt-2">Monitored 24/7/365 by our security operations
+                                    center.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-black/50 border border-brand-purple/20 p-6 rounded-lg group hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all card-hover">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded bg-brand-purple/10 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-brand-dark transition-colors">
+                                <i class="fa-solid fa-key text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1 uppercase text-slate-400">Encrypted Comms
+                                </h4>
+                                <a href="#"
+                                    class="text-lg font-bold text-white group-hover:text-brand-purple transition-colors truncate block">Download
+                                    PGP Key</a>
+                                <p class="text-sm text-slate-500 mt-2 font-mono break-all text-xs opacity-70">
+                                    Fingerprint: 4F9C 8B2A 1E7D 903F 56C4 3A1B 78D2 E9F0 12AB 34CD</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-black/50 border border-white/10 p-6 rounded-lg group hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all card-hover">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded bg-brand-accent/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-dark transition-colors">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1 uppercase text-slate-400">Global HQ</h4>
+                                <p class="text-lg font-bold text-white">Seattle, WA</p>
+                                <p class="text-sm text-slate-500 mt-2">With operatives distributed globally to ensure
+                                    continuous coverage.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Secure Form (Right) -->
+                <div class="lg:col-span-7 reveal delay-300">
+                    <div
+                        class="bg-[#0a0f1a] border border-brand-cyan/30 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(6,182,212,0.1)]">
+                        <!-- Terminal Bar -->
+                        <div
+                            class="bg-slate-900/80 px-4 py-3 border-b border-brand-cyan/20 flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-brand-accent/80"></div>
+                            </div>
+                            <div class="text-slate-400 text-xs font-mono">root@crooksec:~# new_transmission.sh</div>
+                            <div></div>
+                        </div>
+
+                        <!-- Form Area -->
+                        <div class="p-8 sm:p-10">
+                            <p class="text-brand-cyan font-mono text-sm mb-8">> Initiating secure handshake... Ready for
+                                data input.</p>
+
+                            <form action="#" method="POST" class="space-y-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="name"
+                                            class="block text-slate-400 text-xs font-mono uppercase tracking-wider">Operative
+                                            Name</label>
+                                        <div class="relative">
+                                            <div
+                                                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <i class="fa-solid fa-user text-brand-cyan/50 text-sm"></i>
+                                            </div>
+                                            <input type="text" id="name" name="name"
+                                                class="w-full bg-black/40 border border-white/10 rounded px-4 py-3 pl-10 text-white placeholder-slate-600 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors"
+                                                placeholder="John Doe" required>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="email"
+                                            class="block text-slate-400 text-xs font-mono uppercase tracking-wider">Target
+                                            Email</label>
+                                        <div class="relative">
+                                            <div
+                                                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <i class="fa-solid fa-envelope text-brand-cyan/50 text-sm"></i>
+                                            </div>
+                                            <input type="email" id="email" name="email"
+                                                class="w-full bg-black/40 border border-white/10 rounded px-4 py-3 pl-10 text-white placeholder-slate-600 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors"
+                                                placeholder="ciso@company.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="company"
+                                        class="block text-slate-400 text-xs font-mono uppercase tracking-wider">Organization
+                                        / Domain</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fa-solid fa-building text-brand-cyan/50 text-sm"></i>
+                                        </div>
+                                        <input type="text" id="company" name="company"
+                                            class="w-full bg-black/40 border border-white/10 rounded px-4 py-3 pl-10 text-white placeholder-slate-600 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors"
+                                            placeholder="https://example.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="interest"
+                                        class="block text-slate-400 text-xs font-mono uppercase tracking-wider">Primary
+                                        Objective</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fa-solid fa-crosshairs text-brand-cyan/50 text-sm"></i>
+                                        </div>
+                                        <select id="interest" name="interest"
+                                            class="w-full bg-black/40 border border-white/10 rounded px-4 py-3 pl-10 text-slate-300 appearance-none focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors">
+                                            <option value="offensive">Offensive Security / Pen-Testing</option>
+                                            <option value="defensive">Defensive Security / Architecture</option>
+                                            <option value="managed">Managed Cloud Security (CSPM)</option>
+                                            <option value="incident">Urgent: Incident Response</option>
+                                            <option value="other">Other Inquiry</option>
+                                        </select>
+                                        <div
+                                            class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                            <i class="fa-solid fa-chevron-down text-brand-cyan/50 text-xs"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="message"
+                                        class="block text-slate-400 text-xs font-mono uppercase tracking-wider">Transmission
+                                        Payload</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="w-full bg-black/40 border border-white/10 rounded px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors font-mono text-sm resize-none"
+                                        placeholder="Provide infrastructure context or specific vulnerabilities of concern..."></textarea>
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit"
+                                        class="w-full py-4 bg-brand-cyan hover:bg-brand-cyan/90 text-brand-darker font-bold font-mono rounded transition-all shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center gap-2 group">
+                                        EXECUTE_TRANSMISSION <i
+                                            class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                    </button>
+                                </div>
+                                <p class="text-center text-xs text-slate-500 font-mono mt-4">
+                                    <i class="fa-solid fa-lock mr-1"></i> Data payloads are end-to-end encrypted. No
+                                    obligations.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Secondary Information Sections -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+
+                <!-- Office / Business Info -->
+                <div
+                    class="bg-black/40 border border-white/5 rounded-xl p-8 card-hover relative overflow-hidden group reveal delay-100">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/5 rounded-full blur-3xl group-hover:bg-brand-cyan/10 transition-all">
+                    </div>
+                    <div class="flex items-center gap-3 mb-8 border-b border-white/10 pb-4">
+                        <i class="fa-solid fa-building-shield text-brand-cyan text-xl"></i>
+                        <h3 class="text-xl font-bold font-mono text-white">Business Information</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-id-card text-brand-cyan mt-1 w-5 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1">Entity Details</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Crooksec Intelligence
+                                    LLC.<br>Registered in Washington, USA.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-headset text-brand-cyan mt-1 w-5 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1">Dedicated Support Lines</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">US/CAN: <span
+                                        class="text-brand-cyan">1-800-CRK-SEC9</span><br>EMEA: <span
+                                        class="text-brand-cyan">+44 20 7946 0955</span><br><span
+                                        class="text-xs text-slate-500 mt-1 block">Phone lines strictly for active
+                                        retainers and incident response.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security & Privacy Assurance -->
+                <div
+                    class="bg-black/40 border border-white/5 rounded-xl p-8 card-hover relative overflow-hidden group reveal delay-200">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/5 rounded-full blur-3xl group-hover:bg-brand-purple/10 transition-all">
+                    </div>
+                    <div class="flex items-center gap-3 mb-8 border-b border-white/10 pb-4">
+                        <i class="fa-solid fa-user-shield text-brand-purple text-xl"></i>
+                        <h3 class="text-xl font-bold font-mono text-white">Security & Privacy Assurance</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-certificate text-brand-purple mt-1 w-5 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1">Compliance Standards</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">SOC 2 Type II Certified.<br>Fully
+                                    GDPR, CCPA, and HIPAA compliant operations.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-user-secret text-brand-purple mt-1 w-5 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-mono text-sm mb-1">Strict Zero-Knowledge Policy</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Target data and vulnerability profiles
+                                    are strictly compartmentalized and routinely wiped per military-grade sanitization
+                                    protocols (NIST SP 800-88).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+                    <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+                </div>
+                <p class="text-slate-500 text-sm max-w-sm font-light">
+                    The next evolution in cybersecurity. We combine specialized artificial intelligence with elite human
+                    expertise to secure the interconnected future.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Navigation</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Operational
+                            Matrix</a></li>
+                    <li><a href="Pricing.html" class="hover:text-brand-cyan transition-colors">Investment Tiers
+                            (Pricing)</a></li>
+                    <li><a href="aboutus.html" class="hover:text-brand-cyan transition-colors">The AI+Human
+                            Advantage</a></li>
+                    <li><a href="contact.html" class="text-brand-cyan transition-colors">Request Consultation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Command Center</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Dashboard Login</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">API Documentation</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Threat Advisories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-mono">
+            <p>&copy; 2026 Crooksec Intelligence. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

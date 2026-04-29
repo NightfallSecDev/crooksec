@@ -1,0 +1,360 @@
+/* Custom Styles */
+
+body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.glitch-effect {
+    position: relative;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #020617;
+}
+
+.glitch-effect::before {
+    left: 2px;
+    text-shadow: -2px 0 #06b6d4;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch-effect::after {
+    left: -2px;
+    text-shadow: -2px 0 #8b5cf6;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(10px, 9999px, 83px, 0);
+    }
+
+    20% {
+        clip: rect(32px, 9999px, 14px, 0);
+    }
+
+    40% {
+        clip: rect(78px, 9999px, 55px, 0);
+    }
+
+    60% {
+        clip: rect(45px, 9999px, 98px, 0);
+    }
+
+    80% {
+        clip: rect(21px, 9999px, 34px, 0);
+    }
+
+    100% {
+        clip: rect(67px, 9999px, 72px, 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip: rect(65px, 9999px, 100px, 0);
+    }
+
+    20% {
+        clip: rect(15px, 9999px, 5px, 0);
+    }
+
+    40% {
+        clip: rect(89px, 9999px, 45px, 0);
+    }
+
+    60% {
+        clip: rect(34px, 9999px, 76px, 0);
+    }
+
+    80% {
+        clip: rect(98px, 9999px, 12px, 0);
+    }
+
+    100% {
+        clip: rect(23px, 9999px, 88px, 0);
+    }
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.3);
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+/* Grid background pattern */
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 40%, transparent 95%);
+}
+
+/* Emergency Animations (Global) */
+@keyframes pulse-red {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+        border-color: rgba(220, 38, 38, 0.6);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 50px rgba(220, 38, 38, 0.9);
+        border-color: rgba(220, 38, 38, 1);
+        transform: scale(1.02);
+    }
+}
+
+.urgent-pulse {
+    animation: pulse-red 1.5s ease-in-out infinite;
+}
+
+@keyframes warning-flash {
+
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+    }
+
+    50% {
+        opacity: 0.3;
+        text-shadow: none;
+    }
+}
+
+.flash-text {
+    animation: warning-flash 1s steps(2, start) infinite;
+}
+
+@keyframes radar-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 70%, rgba(220, 38, 38, 0.1) 95%, rgba(220, 38, 38, 0.8) 100%);
+    transform-origin: 0 0;
+    animation: radar-spin 4s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Advanced Interactions */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-anim {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes cyber-scan {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+.scan-line {
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-line::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(6, 182, 212, 0.8);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+    animation: cyber-scan 3s linear infinite;
+    z-index: 10;
+}
+
+@keyframes type-blink {
+
+    0%,
+    100% {
+        border-right-color: transparent;
+    }
+
+    50% {
+        border-right-color: #06b6d4;
+    }
+}
+
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #06b6d4;
+    animation: type-blink 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+.stagger-1 {
+    transition-delay: 100ms;
+}
+
+.stagger-2 {
+    transition-delay: 200ms;
+}
+
+.stagger-3 {
+    transition-delay: 300ms;
+}
+
+.stagger-4 {
+    transition-delay: 400ms;
+}
+
+.stagger-5 {
+    transition-delay: 500ms;
+}
+
+.stagger-6 {
+    transition-delay: 600ms;
+}
+
+/* Partner Logo Marquee */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: 200%;
+    animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%) drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));
+}
+
+/* ========================================= */
+/* ADVANCED JS INTERACTIVITY STYLES          */
+/* ========================================= */
+
+/* 1. Global Cyber Spotlight (follows mouse) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle 600px at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(6, 182, 212, 0.05), transparent 80%);
+    pointer-events: none;
+    z-index: 1; /* Just above background, below content */
+}
+
+/* 2. Organic Glitch (triggered by JS) */
+.glitch-active::before {
+    animation: glitch-anim-2 0.2s infinite linear alternate-reverse !important;
+    clip: rect(24px, 550px, 90px, 0) !important;
+    left: 4px !important;
+    text-shadow: -4px 0 rgba(239, 68, 68, 0.8) !important; /* Flash red intensely */
+}
+.glitch-active::after {
+    animation: glitch-anim 0.3s infinite linear alternate-reverse !important;
+    clip: rect(85px, 550px, 140px, 0) !important;
+    left: -4px !important;
+    text-shadow: 4px 0 #06b6d4 !important;
+}
+
+/* 3. Interactive Scan Button */
+.btn-scan {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-scan::before {
+    content: "";
+    position: absolute;
+    top: var(--btn-mouse-y, 50%);
+    left: var(--btn-mouse-x, 50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle max(100px, 100%), rgba(255, 255, 255, 0.3), transparent 50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.2s, height 0.2s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.btn-scan:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+/* 4. Terminal Typing Cursor */
+.terminal-type.typing {
+    position: relative;
+}
+
+.terminal-type.typing::after {
+    content: "_";
+    display: inline-block;
+    color: #06b6d4;
+    animation: type-blink 1s step-end infinite;
+    margin-left: 2px;
+}

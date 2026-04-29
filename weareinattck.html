@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRITICAL INCIDENT | Crooksec</title>
+    <meta name="description"
+        content="Immediate incident response and triage. If you are under attack, report it here for immediate elite intervention.">
+    <!-- Custom JS (Config & Interactions) -->
+    <script src="main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Custom animations for the emergency page */
+        @keyframes pulse-red {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+                border-color: rgba(220, 38, 38, 0.6);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow: 0 0 50px rgba(220, 38, 38, 0.9);
+                border-color: rgba(220, 38, 38, 1);
+                transform: scale(1.02);
+            }
+        }
+
+        .urgent-pulse {
+            animation: pulse-red 1.5s ease-in-out infinite;
+        }
+
+        @keyframes warning-flash {
+
+            0%,
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+            }
+
+            50% {
+                opacity: 0.3;
+                text-shadow: none;
+            }
+        }
+
+        .flash-text {
+            animation: warning-flash 1s steps(2, start) infinite;
+        }
+
+        /* Radar Sweep Animation */
+        @keyframes radar-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .radar-sweep {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 70%, rgba(220, 38, 38, 0.1) 95%, rgba(220, 38, 38, 0.8) 100%);
+            transform-origin: 0 0;
+            animation: radar-spin 4s linear infinite;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Glitch Effect */
+        @keyframes glitch-anim {
+            0% {
+                clip-path: inset(10% 0 10% 0);
+                transform: translate(-2px, 2px);
+            }
+
+            20% {
+                clip-path: inset(80% 0 5% 0);
+                transform: translate(2px, -2px);
+            }
+
+            40% {
+                clip-path: inset(30% 0 40% 0);
+                transform: translate(-2px, 0);
+            }
+
+            60% {
+                clip-path: inset(60% 0 10% 0);
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                clip-path: inset(15% 0 70% 0);
+                transform: translate(-2px, -2px);
+            }
+
+            100% {
+                clip-path: inset(50% 0 30% 0);
+                transform: translate(0);
+            }
+        }
+
+        .text-glitch {
+            position: relative;
+        }
+
+        .text-glitch::before,
+        .text-glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .text-glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 red;
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        .text-glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 blue;
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+    </style>
+</head>
+
+<body
+    class="antialiased font-sans selection:bg-red-500 selection:text-white relative overflow-x-hidden bg-[#050505] text-white">
+
+    <!-- Background Elements (Red Theme) -->
+    <div class="fixed inset-0 z-[-1] bg-[#050505] overflow-hidden">
+        <div class="fixed inset-0 z-[-1] bg-grid opacity-10"></div>
+        <!-- Animated Radar Container -->
+        <div
+            class="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] border border-red-900/30 rounded-full opacity-20 pointer-events-none">
+            <div class="absolute inset-0 border border-red-900/50 rounded-full scale-75"></div>
+            <div class="absolute inset-0 border border-red-900/50 rounded-full scale-50"></div>
+            <div class="radar-sweep"></div>
+        </div>
+        <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-red-900/20 blur-[150px] rounded-full mix-blend-screen z-[-1] pointer-events-none animate-pulse"
+            style="animation-duration: 4s;"></div>
+    </div>
+
+    <!-- Minimal Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-red-500/20 bg-black/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 transition-transform hover:scale-105">
+                <i
+                    class="fa-solid fa-shield-halved text-red-500 text-2xl drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]"></i>
+                <span class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <span class="font-mono text-xs sm:text-sm text-red-500 font-bold tracking-widest flash-text">
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> INCIDENT_STREAM_ACTIVE
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Emergency Hero -->
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div
+                class="inline-flex items-center justify-center w-24 h-24 bg-red-500/10 border-2 border-red-500 rounded-full text-red-500 text-4xl mb-8 urgent-pulse shadow-[0_0_30px_rgba(239,68,68,0.4)] relative">
+                <i class="fa-solid fa-crosshairs fa-spin" style="animation-duration: 4s;"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-white uppercase text-glitch"
+                data-text="Active Breach Intervention">
+                Active Breach <br><span
+                    class="text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">Intervention</span>
+            </h1>
+            <div
+                class="inline-block border border-red-900/50 bg-red-900/20 px-6 py-2 rounded mb-6 font-mono text-sm text-red-400">
+                STATUS: CONDITION RED
+            </div>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                If you are experiencing an active cyberattack, ransomware deployment, or critical data exfiltration,
+                immediate action is required. Submit the secure telemetry log below or call the hotline to trigger our
+                intervention protocols.
+            </p>
+        </div>
+    </section>
+
+    <!-- Incident Triage Area -->
+    <section class="py-12 px-6 relative z-10 mb-20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+            <!-- Immediate Contact Sidebar -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Live Telemetry UI Element -->
+                <div
+                    class="bg-black/80 border border-red-500/20 p-4 rounded-xl backdrop-blur-md mb-6 font-mono text-xs text-red-500/80 hidden sm:block">
+                    <div class="flex justify-between items-center mb-2 border-b border-red-900/30 pb-2">
+                        <span>SYS_TRAFFIC_MONITOR</span>
+                        <span class="animate-pulse">REC_LINK: OK</span>
+                    </div>
+                    <div class="space-y-1 opacity-70">
+                        <p class="terminal-type" data-type-speed="10">> Handshake established.</p>
+                        <p class="terminal-type" data-type-speed="20">> Encrypting P2P intake...</p>
+                        <p class="terminal-type" data-type-speed="40">> Awaiting incident payload...</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-red-500/10 border border-red-500/50 p-8 rounded-xl backdrop-blur-sm relative overflow-hidden group shadow-[0_0_30px_rgba(239,68,68,0.1)] hover:shadow-[0_0_40px_rgba(239,68,68,0.2)] transition-all">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-red-500 shadow-[0_0_15px_rgba(239,68,68,1)]"></div>
+                    <h3 class="font-mono text-red-500 text-sm tracking-widest mb-2 font-bold uppercase"><i
+                            class="fa-solid fa-phone-volume mr-2 flash-text"></i> Priority Hotline</h3>
+                    <p class="text-3xl lg:text-4xl font-bold text-white tracking-wider my-4">1-800-CRK-0DAY</p>
+                    <p class="text-sm text-slate-300 border-t border-red-900/30 pt-4">Available 24/7/365. For active,
+                        confirmed breaches only. Average answer time: 14 seconds.</p>
+                </div>
+
+                <div
+                    class="bg-black/60 border border-white/10 p-8 rounded-xl backdrop-blur-sm relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-red-900/10 pointer-events-none">
+                    </div>
+                    <h3
+                        class="font-mono text-white text-sm tracking-widest mb-4 font-bold uppercase border-b border-white/10 pb-4">
+                        Intervention Protocol</h3>
+                    <ul class="space-y-6 text-sm text-slate-400 relative z-10">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-stopwatch text-brand-cyan text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">1. Immediate Triage</strong>
+                                An elite incident commander will establish secure comms and evaluate your telemetry
+                                within 15 minutes.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-network-wired text-brand-purple text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">2. Fast Containment</strong>
+                                Deploying Crooksec agents for rapid network isolation and active threat hunting to halt
+                                lateral movement.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-microscope text-red-500 text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">3. Eradication & Forensics</strong>
+                                We trace the kill chain to its root cause, eliminate footholds, reverse engineering
+                                custom malware, and preserve legal evidence.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Triage Form -->
+            <div class="lg:col-span-3">
+                <div class="bg-black border border-white/10 p-8 sm:p-10 rounded-xl shadow-2xl relative">
+                    <div
+                        class="absolute -top-3 left-8 bg-red-500 text-white font-mono text-xs font-bold px-3 py-1 rounded shadow-[0_0_10px_rgba(239,68,68,0.5)] tracking-widest uppercase">
+                        Secure Intake Portal
+                    </div>
+
+                    <form id="emergency-form" class="space-y-6 mt-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="orgName" class="block text-sm font-mono text-slate-400">Organization Name
+                                    *</label>
+                                <input type="text" id="orgName" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:bg-white/10 transition-colors font-mono text-sm placeholder:text-slate-600"
+                                    placeholder="Enter company name">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="incidentType" class="block text-sm font-mono text-slate-400">Suspected
+                                    Threat *</label>
+                                <select id="incidentType" required
+                                    class="w-full bg-[#0a0a0a] border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:bg-[#111] transition-colors font-mono text-sm appearance-none">
+                                    <option value="" disabled selected>Select Incident Type</option>
+                                    <option value="ransomware">Ransomware / Encryption</option>
+                                    <option value="data_breach">Data Exfiltration</option>
+                                    <option value="network_intrusion">Network / Active Intrusion</option>
+                                    <option value="ddos">DDoS / Availability Attack</option>
+                                    <option value="insider">Insider Threat</option>
+                                    <option value="unknown">Unknown / Anomaly</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="contactName" class="block text-sm font-mono text-slate-400">Primary Contact
+                                    *</label>
+                                <input type="text" id="contactName" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:bg-white/10 transition-colors font-mono text-sm placeholder:text-slate-600"
+                                    placeholder="Full Name">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="contactPhone" class="block text-sm font-mono text-slate-400">Direct Phone
+                                    *</label>
+                                <input type="tel" id="contactPhone" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:bg-white/10 transition-colors font-mono text-sm placeholder:text-slate-600"
+                                    placeholder="+1 (555) 000-0000">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="contactEmail" class="block text-sm font-mono text-slate-400">Secure
+                                Email</label>
+                            <input type="email" id="contactEmail" required
+                                class="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:bg-white/10 transition-colors font-mono text-sm placeholder:text-slate-600"
+                                placeholder="name@company.com">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="incidentDetails" class="block text-sm font-mono text-slate-400">Incident Details
+                                *</label>
+                            <textarea id="incidentDetails" rows="4" required
+                                class="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:bg-white/10 transition-colors font-mono text-sm placeholder:text-slate-600 resize-none"
+                                placeholder="Describe current impact, systems affected, and timeline of events. Do NOT paste sensitive credentials or keys here."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-md transition-colors flex items-center justify-center gap-2 urgent-pulse">
+                            <i class="fa-solid fa-triangle-exclamation"></i> DECLARE INCIDENT
+                        </button>
+                    </form>
+
+                    <!-- Form Submission Status Overlay (Hidden by default) -->
+                    <div id="emergency-status"
+                        class="hidden absolute inset-0 bg-black/95 backdrop-blur-md rounded-xl flex flex-col items-center justify-center p-8 z-20">
+                        <i class="fa-solid fa-circle-check text-green-500 text-6xl mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2 font-mono">SIGNAL RECEIVED</h3>
+                        <p class="text-slate-400 text-center font-mono text-sm">Our rapid response team has been
+                            alerted. An incident commander will contact you at the provided number immediately.</p>
+                        <button onclick="document.getElementById('emergency-status').classList.add('hidden')"
+                            class="mt-8 px-6 py-2 border border-white/20 text-white hover:bg-white/10 rounded font-mono text-sm transition-colors">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+                <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+            </div>
+            <p class="text-slate-500 text-sm font-mono">
+                © 2026 Crooksec Intelligence. All rights reserved. Secure operations only.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Handle emergency form submission
+        document.getElementById('emergency-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Show the success overlay
+            document.getElementById('emergency-status').classList.remove('hidden');
+            // Reset the form
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

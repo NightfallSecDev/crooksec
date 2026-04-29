@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Crooksec</title>
+    <meta name="description"
+        content="Explore our full-spectrum offensive, defensive, and managed cybersecurity services.">
+    <!-- Custom JS (Config & Interactions) -->
+    <script src="main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-darker relative overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-1] bg-brand-darker"></div>
+    <div class="fixed inset-0 z-[-1] bg-grid opacity-20"></div>
+    <div
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-cyan/10 blur-[150px] rounded-full mix-blend-screen z-[-1] pointer-events-none">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/10 bg-brand-darker/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl"></i>
+                <a href="index.html" class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</a>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-mono text-slate-300">
+                <a href="service.html" class="text-brand-cyan transition-colors font-bold">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">/CASE_STUDIES</a>
+                <div class="relative group">
+                    <button class="hover:text-brand-cyan transition-colors flex items-center gap-1">
+                        /PARTNERS <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-brand-darker border border-white/10 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                        <a href="patner.html" class="block px-4 py-2 hover:bg-brand-cyan/10 hover:text-brand-cyan text-sm">Partner Network</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors">/CONTACT</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="btn-scan hidden sm:inline-flex px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
+            <div class="flex flex-col gap-4 text-sm font-mono text-slate-300">
+                <a href="service.html" class="text-brand-cyan transition-colors font-bold py-2 border-b border-white/5">/SERVICES</a>
+                <a href="aboutus.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/ABOUT_US</a>
+                <a href="Pricing.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PRICING</a>
+                <a href="Case Studies.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/CASE_STUDIES</a>
+                <a href="patner.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/PARTNER_NETWORK</a>
+                <a href="contact.html" class="hover:text-brand-cyan transition-colors py-2">/CONTACT</a>
+                <a href="contact.html" class="btn-scan w-full mt-2 px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all text-center">
+                    INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-20 relative z-10 px-6 text-center reveal">
+        <div class="max-w-4xl mx-auto">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 text-brand-cyan text-xs font-mono mb-6 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+                ACTIVE ARSENAL
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Full-Spectrum <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Security
+                    Protocols</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Explore our comprehensive suite of offensive assessments, defensive architecture hardening, and
+                continuous managed intelligence services.
+            </p>
+        </div>
+    </header>
+
+    <!-- Detailed Services Capabilities -->
+    <section class="py-16 relative z-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12">
+
+            <!-- Sidebar Navigation -->
+            <aside class="hidden lg:block w-64 shrink-0 sticky top-32 self-start z-20">
+                <nav
+                    class="bg-black/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/5 rounded-full blur-3xl group-hover:bg-brand-cyan/10 transition-all">
+                    </div>
+                    <h3
+                        class="text-white font-mono text-sm mb-4 uppercase tracking-widest border-b border-white/10 pb-4 relative z-10">
+                        Service Index</h3>
+                    <ul class="space-y-2 sidebar-nav relative z-10">
+                        <div class="absolute left-0 top-0 w-0.5 h-full bg-white/5 rounded"></div>
+                        <li>
+                            <a href="#offensive" data-target="offensive"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-brand-cyan border-brand-cyan bg-brand-cyan/10">01.
+                                Offensive</a>
+                        </li>
+                        <li>
+                            <a href="#defensive" data-target="defensive"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">02.
+                                Defensive</a>
+                        </li>
+                        <li>
+                            <a href="#cloud" data-target="cloud"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">03.
+                                Cloud & Infra</a>
+                        </li>
+                        <li>
+                            <a href="#risk" data-target="risk"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">04.
+                                Digital Risk</a>
+                        </li>
+                        <li>
+                            <a href="#devsecops" data-target="devsecops"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">05.
+                                Secure Dev</a>
+                        </li>
+                        <li>
+                            <a href="#devservices" data-target="devservices"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">06.
+                                Development Services</a>
+                        </li>
+                        <li>
+                            <a href="#mobiledev" data-target="mobiledev"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">07.
+                                Mobile & App</a>
+                        </li>
+                        <li>
+                            <a href="#blockchain" data-target="blockchain"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">08.
+                                Blockchain</a>
+                        </li>
+                        <li>
+                            <a href="#consulting" data-target="consulting"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">09.
+                                Teams & Consulting</a>
+                        </li>
+                        <li>
+                            <a href="#osint" data-target="osint"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">10.
+                                OSINT & Intel</a>
+                        </li>
+                        <li>
+                            <a href="#training" data-target="training"
+                                class="nav-link block py-2.5 px-4 rounded text-sm font-mono transition-all border-l-2 text-slate-400 border-transparent hover:text-white hover:border-white/20">11.
+                                Training & Courses</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="flex-1 space-y-32">
+
+                <!-- Category 1: Offensive Security -->
+                <div id="offensive" class="service-section scroll-mt-32 reveal delay-100">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-red-500/10 text-red-500 border border-red-500/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Offensive Security</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                We emulate advanced persistent threats (APTs) to uncover your deepest operational
+                                vulnerabilities before real attackers do.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-red-500/50 hover:bg-red-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-red-400 flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-red-500/10 px-2 py-1 rounded border border-red-500/20">01.01_Continuous_Pen_Testing</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-red-500"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Continuous Pen-Testing</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Deep, manual exploitation of
+                                complex logic flaws beyond the reach of automated scanners. We establish an active
+                                perimeter verification loop that adapts to new threat variants and ensures maximum
+                                resistance.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-red-500/50 hover:bg-red-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-red-400 flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-red-500/10 px-2 py-1 rounded border border-red-500/20">01.02_Red_Teaming</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-red-500"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Red Teaming Operations</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Full-scale objective-based
+                                simulations testing physical, human (social engineering), and digital defenses. Our
+                                operatives mimic sophisticated nation-state actors to train your SOC and validate
+                                defensive controls.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-red-500/50 hover:bg-red-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-red-400 flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-red-500/10 px-2 py-1 rounded border border-red-500/20">01.03_AppSec</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-red-500"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Web/Mobile App Sec</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Targeted assessments mapping
+                                complex API endpoints, reverse-engineering mobile binaries (APK/IPA), and exploiting
+                                zero-day logic vulnerabilities in proprietary software applications.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-red-500/50 hover:bg-red-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-red-400 flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-red-500/10 px-2 py-1 rounded border border-red-500/20">01.04_Vulnerability_Chaining</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-red-500"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Vulnerability Chaining</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Connecting seemingly
+                                low-risk oversights and configurations into critical pivot points. We demonstrate
+                                real-world systemic compromise pathways that automated tools inherently miss.</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-red-500/50 hover:bg-red-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-red-400 flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-red-500/10 px-2 py-1 rounded border border-red-500/20">01.05_IoT_OT_Exploitation</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-red-500"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">IoT & OT Hardening</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Specialized hardware hacking
+                                and firmware reverse engineering for Internet of Things and industrial Operational
+                                Technology networks, bridging physical and digital risks.</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-red-500/50 hover:bg-red-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-red-400 flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-red-500/10 px-2 py-1 rounded border border-red-500/20">01.06_Wireless_Security</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-red-500"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Wireless Exploitation</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Comprehensive mapping and
+                                penetration of corporate Wi-Fi, Bluetooth, and SDR spectrums to identify rogue access
+                                points and encryption protocol weaknesses (WPA3/Enterprise).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Defensive Security -->
+                <div id="defensive" class="service-section scroll-mt-32 reveal delay-200">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-brand-blue/10 text-brand-blue border border-brand-blue/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Defensive Security</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Resilient architectures built to withstand determined adversaries. We lock down your
+                                perimeter from the code level to the endpoint.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl group-hover:bg-brand-blue/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-blue flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-blue/10 px-2 py-1 rounded border border-brand-blue/20">02.01_Architecture</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-blue"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Architecture Review</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Systemic review and
+                                hardening of complex network topologies to implement rigorous zero-trust frameworks
+                                across on-prem and hybrid environments, significantly reducing blast radius.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl group-hover:bg-brand-blue/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-blue flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-blue/10 px-2 py-1 rounded border border-brand-blue/20">02.02_EDR_Tuning</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-blue"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">EDR/XDR Tuning</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Custom behavioral rule
+                                implementation for leading EDR platforms (CrowdStrike, SentinelOne) to eliminate false
+                                positives and detect true stealth persistence mechanisms.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl group-hover:bg-brand-blue/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-blue flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-blue/10 px-2 py-1 rounded border border-brand-blue/20">02.03_Zero_Day_Def</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-blue"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Zero-Day Prevention</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Implementation of
+                                memory-safe heuristics and proactive sandbox containment protocols to stop unpatched,
+                                never-before-seen vulnerabilities from executing payloads.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl group-hover:bg-brand-blue/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-blue flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-blue/10 px-2 py-1 rounded border border-brand-blue/20">02.04_IR_Readiness</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-blue"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Incident Readiness</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Simulated tabletop exercises
+                                and forensic readiness assessments to ensure your internal teams can execute an
+                                immediate lockdown upon active breach detection.</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl group-hover:bg-brand-blue/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-blue flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-blue/10 px-2 py-1 rounded border border-brand-blue/20">02.05_Network_Traffic</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-blue"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Network Traffic Analysis</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Deployment of AI-driven deep
+                                packet inspection to identify anomalous lateral movement, C2 beaconing, and unauthorized
+                                data exfiltration within your core network.</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl group-hover:bg-brand-blue/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-blue flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-blue/10 px-2 py-1 rounded border border-brand-blue/20">02.06_Endpoint_Lockdown</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-blue"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Endpoint Hardening</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Strict implementation of
+                                application whitelisting, privileged access management (PAM), and OS-level exploit
+                                mitigation to ensure endpoints resist local privilege escalation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Cloud & Infrastructure -->
+                <div id="cloud" class="service-section scroll-mt-32 reveal delay-300">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Cloud & Infrastructure</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Continuous posture management (CSPM) and complex multi-cloud lockdown. Guarding the
+                                ephemeral edge.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-cyan/10 rounded-full blur-2xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-cyan flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-cyan/10 px-2 py-1 rounded border border-brand-cyan/20">03.01_CSPM</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-cyan"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Multi-Cloud Posture</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Continuous monitoring of
+                                AWS, Azure, and GCP configurations to prevent devastating bucket misconfigurations,
+                                exposed databases, and overly permissive firewall rules.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-cyan/10 rounded-full blur-2xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-cyan flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-cyan/10 px-2 py-1 rounded border border-brand-cyan/20">03.02_IAM_Audits</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-cyan"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Identity & Access Audits</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Enforcement of radical least
+                                privilege, mapping toxic permission combinations, orphaned roles, and cross-account
+                                vulnerabilities that allow lateral movement in the cloud.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-cyan/10 rounded-full blur-2xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-cyan flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-cyan/10 px-2 py-1 rounded border border-brand-cyan/20">03.03_Containers</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-cyan"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Container Security</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Vulnerability scanning of
+                                Docker registries and deep Kubernetes (K8s) orchestration hardening to stop container
+                                escapes and cluster takeovers at the node level.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-cyan/10 rounded-full blur-2xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-cyan flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-cyan/10 px-2 py-1 rounded border border-brand-cyan/20">03.04_IaC_Scanning</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-cyan"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">IaC Scanning</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Automated pre-deployment
+                                scanning of Infrastructure as Code templates (Terraform, CloudFormation) to catch
+                                critical architectural flaws before they are ever provisioned.</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-cyan/10 rounded-full blur-2xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-cyan flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-cyan/10 px-2 py-1 rounded border border-brand-cyan/20">03.05_Serverless</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-cyan"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Serverless Security</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Micro-segmentation and
+                                runtime protection for AWS Lambda and Azure Functions, mitigating event-data injection
+                                and unauthorized execution flows.</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-cyan/10 rounded-full blur-2xl group-hover:bg-brand-cyan/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-cyan flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-cyan/10 px-2 py-1 rounded border border-brand-cyan/20">03.06_Cloud_Forensics</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-cyan"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Cloud Forensics</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Rapid log aggregation and
+                                incident timeline reconstruction across multi-cloud logging planes (CloudTrail, VPC Flow
+                                Logs) for rapid threat eradication.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Digital Risk & Dark Web Intel -->
+                <div id="risk" class="service-section scroll-mt-32 reveal delay-400">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-brand-purple/10 text-brand-purple border border-brand-purple/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+                            <i class="fa-solid fa-user-secret"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Digital Risk & Dark Web Intel</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Proactive intelligence gathering beyond your perimeter. We track compromised credentials
+                                before they are weaponized.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-purple flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-purple/10 px-2 py-1 rounded border border-brand-purple/20">04.01_Credential_Leaks</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-purple"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Credential Leak DB</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Real-time alerts when your
+                                employee emails, passwords, and API keys appear in underground forum dumps, info-stealer
+                                logs, and initial access broker listings.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-purple flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-purple/10 px-2 py-1 rounded border border-brand-purple/20">04.02_Brand_Protection</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-purple"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Brand Takedowns</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Continuous identification
+                                and rapid takedown of typosquatted phishing domains, copycat mobile applications, and
+                                fraudulent social media profiles targeting your customers.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-purple flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-purple/10 px-2 py-1 rounded border border-brand-purple/20">04.03_Exec_Protection</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-purple"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Executive OSINT</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Scrubbing PII from data
+                                brokers and mapping personalized attack vectors targeting your C-suite and key personnel
+                                to prevent highly targeted spear-phishing (whaling).</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-purple flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-purple/10 px-2 py-1 rounded border border-brand-purple/20">04.04_Threat_Hunting</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-purple"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Active Threat Hunting</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Our human intelligence
+                                (HUMINT) operatives infiltrate illicit Telegram channels and elite ransomware forums to
+                                intercept targeted chatter against your specific domain assets.</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-purple flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-purple/10 px-2 py-1 rounded border border-brand-purple/20">04.05_Fraud_Intel</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-purple"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Fraud Intelligence</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Monitoring deep web markets
+                                for stolen credit card BINs, synthetic identity fraud blueprints, and coordinated botnet
+                                strikes against your payment gateways.</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-purple/50 hover:bg-brand-purple/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-purple flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-purple/10 px-2 py-1 rounded border border-brand-purple/20">04.06_Supply_Chain</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-purple"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Third-Party Risk</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Continuous continuous
+                                scanning of your primary vendors, suppliers, and partners for data breaches that could
+                                indirectly expose your intellectual property or network.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Secure Development -->
+                <div id="devsecops" class="service-section scroll-mt-32 reveal delay-500">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-brand-accent/10 text-brand-accent border border-brand-accent/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Secure Development</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Shift-left security integration. We embed closely with your DevSecOps pipelines from day
+                                zero.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-accent flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20">05.01_CI_CD_Sec</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-accent"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">CI/CD Integration</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Seamless embedding of Static
+                                (SAST) and Dynamic (DAST) analysis tooling directly into your build, preventing
+                                vulnerabilities from ever reaching production.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-accent flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20">05.02_Code_Review</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-accent"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Secure Code Review</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Line-by-line manual logic
+                                audits of your most critical code paths, including custom authentication modules,
+                                payment gateways, and proprietary algorithms.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-accent flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20">05.03_Resilience</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-accent"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Resilience Design</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Engineering auto-failing and
+                                self-healing system architectures that isolate compromised microservices immediately and
+                                prevent total application collapse.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-accent flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20">05.04_Crypto_Audits</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-accent"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Cryptographic Audits</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Rigorous mathematical
+                                validation of encryption implementation (at rest/in transit), key management lifecycles
+                                (KMS/HSM), and custom hashing algorithms.</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-accent flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20">05.05_Dependencies</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-accent"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">Dependency Management</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Continuous auditing of
+                                open-source libraries and NPM/PyPI packages to detect software supply chain poisoning
+                                and outdated CVEs in your tech stack.</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div
+                            class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <div
+                                class="absolute -right-4 -top-4 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-all opacity-0 group-hover:opacity-100">
+                            </div>
+                            <h4
+                                class="text-white font-mono text-xs mb-3 text-brand-accent flex items-center justify-between relative z-10">
+                                <span
+                                    class="bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20">05.06_Maturity_Assess</span>
+                                <i
+                                    class="fa-solid fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-brand-accent"></i>
+                            </h4>
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10">DevSecOps Maturity</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Holistic evaluation of your
+                                engineering teams' security posture, delivering actionable roadmaps to elevate your
+                                SSDLC from ad-hoc to fully integrated.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 6: Development Services -->
+                <div id="devservices" class="service-section scroll-mt-32 reveal delay-100">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Development Services</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Robust, scalable, and secure engineering solutions tailored to your complex enterprise requirements.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-window-maximize text-brand-cyan mr-2"></i>Web Application Development</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">High-performance, secure web applications built on modern frameworks (React, Vue, Node.js) with robust architecture.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-microchip text-brand-cyan mr-2"></i>Custom Software Development</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Bespoke software solutions engineered from the ground up to solve your unique operational challenges.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-sitemap text-brand-cyan mr-2"></i>CMS / HRM / Enterprise Systems</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Scalable enterprise resource planning, content management, and human resource systems.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-cyan/50 hover:bg-brand-cyan/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(6,182,212,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-server text-brand-cyan mr-2"></i>Secure Backend Architecture</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Hardened server-side infrastructure, optimized databases, and secure API gateways designed for high availability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 7: Mobile & App Development -->
+                <div id="mobiledev" class="service-section scroll-mt-32 reveal delay-200">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-blue-500/10 text-blue-500 border border-blue-500/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Mobile & App Development</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Engaging, performant, and secure mobile experiences for global audiences.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-brands fa-android text-blue-500 mr-2"></i>Android App Development</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Native Android applications engineered with Kotlin, featuring secure data storage and optimized performance.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-brands fa-apple text-blue-500 mr-2"></i>iOS App Development</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Native iOS applications utilizing Swift, designed for the Apple ecosystem with strict adherence to security guidelines.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] group relative overflow-hidden md:col-span-2">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-layer-group text-blue-500 mr-2"></i>Cross-platform Applications</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Unified codebases using React Native or Flutter, delivering consistent UI/UX across iOS and Android without compromising on security or performance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 8: Blockchain Development -->
+                <div id="blockchain" class="service-section scroll-mt-32 reveal delay-300">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-yellow-500/10 text-yellow-500 border border-yellow-500/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Blockchain Development</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Decentralized, transparent, and cryptographically secure distributed ledger technologies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-yellow-500/50 hover:bg-yellow-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(234,179,8,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-file-contract text-yellow-500 mr-2"></i>Smart Contract Development</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Audited, gas-optimized, and formally verified smart contracts for Ethereum, Solana, and EVM-compatible chains.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-yellow-500/50 hover:bg-yellow-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(234,179,8,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-cubes text-yellow-500 mr-2"></i>Decentralized Applications (dApps)</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">End-to-end dApp development with seamless Web3 wallet integrations and decentralized storage solutions.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-yellow-500/50 hover:bg-yellow-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(234,179,8,0.15)] group relative overflow-hidden md:col-span-2">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-network-wired text-yellow-500 mr-2"></i>Blockchain Platforms & Integration</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Integrating private or public blockchains into existing enterprise architectures, establishing secure consensus mechanisms, and deploying custom Layer 2 solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 9: Teams & Consulting -->
+                <div id="consulting" class="service-section scroll-mt-32 reveal delay-400">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-emerald-500/10 text-emerald-500 border border-emerald-500/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Dedicated Teams & Consulting</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Augment your capabilities with our specialized talent and strategic guidance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-user-tie text-emerald-500 mr-2"></i>Dedicated Developers / Teams</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Fully integrated engineering pods embedded into your workflow, scaling your development and security capacity on demand.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-compass-drafting text-emerald-500 mr-2"></i>Tech Consulting & Architecture</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Strategic guidance for digital transformation, system architecture overhauls, and selecting the optimal technology stack for your specific requirements.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden md:col-span-2">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-handshake-angle text-emerald-500 mr-2"></i>Long-term Product Support</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Continuous maintenance, scaling, and feature iteration for established digital products, ensuring longevity and sustained security compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 10: OSINT & Threat Intel -->
+                <div id="osint" class="service-section scroll-mt-32 reveal delay-100">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-purple-500/10 text-purple-500 border border-purple-500/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">OSINT & Threat Intelligence</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Uncover hidden risks, monitor the dark web, and anticipate threats before they breach your perimeter.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(168,85,247,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-globe text-purple-500 mr-2"></i>Digital Footprint Analysis</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Comprehensive mapping of your organization's exposed assets, forgotten subdomains, and public data leaks that attackers can exploit.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(168,85,247,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-user-ninja text-purple-500 mr-2"></i>Dark Web Monitoring</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Active surveillance of illicit forums, ransomware leak sites, and underground markets for compromised credentials or planned attacks against your brand.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(168,85,247,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-radar text-purple-500 mr-2"></i>Threat Intelligence</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">Curated, actionable intelligence feeds tailored to your industry, providing early warnings of emerging APT campaigns and zero-day exploits.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(168,85,247,0.15)] group relative overflow-hidden">
+                            <h3 class="text-xl font-bold text-white mb-3 relative z-10"><i class="fa-solid fa-user-secret text-purple-500 mr-2"></i>Cybercrime Research Support</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed relative z-10">In-depth investigations into threat actors, attribution analysis, and specialized operational support for complex cyber incidents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 11: Training & Courses -->
+                <div id="training" class="service-section scroll-mt-32 reveal delay-200">
+                    <div class="flex items-center gap-4 lg:gap-6 mb-8 border-b border-white/10 pb-6">
+                        <div
+                            class="w-16 h-16 shrink-0 bg-brand-accent/10 text-brand-accent border border-brand-accent/30 rounded flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2">Training & Courses</h2>
+                            <p class="text-slate-400 leading-relaxed font-light hidden sm:block">
+                                Empower your teams with real-world adversarial tactics and advanced defensive methodologies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-lg font-bold text-white mb-2 relative z-10"><i class="fa-solid fa-skull-crossbones text-brand-accent mr-2"></i>Ethical Hacking</h3>
+                            <p class="text-slate-400 text-sm relative z-10">Hands-on methodologies for penetration testing and vulnerability exploitation.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-lg font-bold text-white mb-2 relative z-10"><i class="fa-solid fa-wifi text-brand-accent mr-2"></i>Wireless Security</h3>
+                            <p class="text-slate-400 text-sm relative z-10">Attacking and securing Wi-Fi, Bluetooth, and RFID/NFC protocols.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-lg font-bold text-white mb-2 relative z-10"><i class="fa-solid fa-plug-circle-bolt text-brand-accent mr-2"></i>API Security</h3>
+                            <p class="text-slate-400 text-sm relative z-10">Identifying and exploiting OWASP Top 10 API vulnerabilities.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-lg font-bold text-white mb-2 relative z-10"><i class="fa-solid fa-cloud text-brand-accent mr-2"></i>Cloud Security</h3>
+                            <p class="text-slate-400 text-sm relative z-10">Securing AWS, Azure, and GCP architectures against advanced threats.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-lg font-bold text-white mb-2 relative z-10"><i class="fa-solid fa-eye text-brand-accent mr-2"></i>OSINT Training</h3>
+                            <p class="text-slate-400 text-sm relative z-10">Advanced techniques for open-source intelligence gathering and reconnaissance.</p>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 p-6 rounded-lg hover:border-brand-accent/50 hover:bg-brand-accent/5 transition-all duration-300 card-hover transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.15)] group relative overflow-hidden">
+                            <h3 class="text-lg font-bold text-white mb-2 relative z-10"><i class="fa-solid fa-bug text-brand-accent mr-2"></i>Exploit Development</h3>
+                            <p class="text-slate-400 text-sm relative z-10">Buffer overflows, ROP chains, and crafting custom zero-day exploits.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- S1-S4 Pricing Section -->
+    <section class="py-24 relative z-10 px-6 bg-brand-darker border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-cyan font-mono text-sm mb-2 uppercase tracking-widest">// SERVICE_LEVEL_AGREEMENTS
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-4">Pricing Tiers</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto">Scalable protection designed to grow with your
+                    infrastructure, from seed startups to global enterprise ecosystems.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Tier S1 -->
+                <div
+                    class="bg-black/50 border border-white/10 rounded-xl p-8 flex flex-col card-hover reveal delay-100">
+                    <h4 class="font-mono text-white text-lg mb-2">S1: Foundation</h4>
+                    <p class="text-slate-500 text-sm mb-6 h-10">Essential continuous monitoring for early-stage
+                        companies.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold text-white">$999</span>
+                        <span class="text-slate-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Weekly AI Scans
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Basic Asset Discovery
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Quarterly Human Review
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-500 opacity-50">
+                            <i class="fa-solid fa-xmark"></i> Advanced Threat Hunting
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="w-full py-3 bg-white/5 hover:bg-white/10 text-white text-center font-mono text-sm rounded transition-colors border border-white/10">Deploy
+                        S1</a>
+                </div>
+
+                <!-- Tier S2 (Popular) -->
+                <div
+                    class="bg-black border-2 border-brand-cyan rounded-xl p-8 flex flex-col pricing-glow relative transform md:-translate-y-4 reveal delay-200 z-10">
+                    <div
+                        class="absolute top-0 right-0 bg-brand-cyan text-brand-darker font-bold font-mono text-xs px-3 py-1 rounded-bl-lg">
+                        POPULAR</div>
+                    <h4 class="font-mono text-brand-cyan text-lg mb-2">S2: Acceleration</h4>
+                    <p class="text-slate-400 text-sm mb-6 h-10">Advanced defense layer for rapidly scaling applications.
+                    </p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold text-white">$2,499</span>
+                        <span class="text-slate-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-slate-100">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Daily AI Scans
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-100">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Cloud Posture (CSPM)
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-100">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Monthly Human Pen-Test
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-100">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Basic Dark Web Intel
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="w-full py-3 bg-brand-cyan hover:bg-brand-cyan/90 text-brand-darker text-center font-mono font-bold text-sm rounded shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all">Deploy
+                        S2</a>
+                </div>
+
+                <!-- Tier S3 -->
+                <div
+                    class="bg-black/50 border border-white/10 rounded-xl p-8 flex flex-col card-hover reveal delay-300">
+                    <h4 class="font-mono text-white text-lg mb-2">S3: Enterprise</h4>
+                    <p class="text-slate-500 text-sm mb-6 h-10">Full-spectrum managed security and active threat
+                        hunting.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold text-white">$5,999</span>
+                        <span class="text-slate-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Real-time AI Scans
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Dedicated Security Pod
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Continuous Red Teaming
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-cyan"></i> Full Dark Web Intel
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="w-full py-3 bg-white/5 hover:bg-white/10 text-white text-center font-mono text-sm rounded transition-colors border border-white/10">Deploy
+                        S3</a>
+                </div>
+
+                <!-- Tier S4 -->
+                <div
+                    class="bg-black/50 border border-brand-purple/30 rounded-xl p-8 flex flex-col card-hover reveal delay-400 overflow-hidden relative group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/10 rounded-full blur-3xl group-hover:bg-brand-purple/20 transition-all">
+                    </div>
+                    <h4 class="font-mono text-brand-purple text-lg mb-2 relative z-10">S4: Nexus</h4>
+                    <p class="text-slate-500 text-sm mb-6 h-10 relative z-10">Bespoke integrations, on-prem deployment,
+                        & direct API access.</p>
+                    <div class="mb-8 relative z-10">
+                        <span class="text-3xl font-bold text-white mt-1 block">Custom</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow relative z-10">
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-purple"></i> Custom LLM Training
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-purple"></i> On-Premise Agents
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-purple"></i> Physical Social Engineering
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-check text-brand-purple"></i> 1hr SLA Incident Response
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="w-full py-3 bg-brand-purple/10 hover:bg-brand-purple/20 text-brand-purple text-center font-mono text-sm rounded transition-colors border border-brand-purple/30 relative z-10">Contact
+                        Sales</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+                    <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
+                </div>
+                <p class="text-slate-500 text-sm max-w-sm font-light">
+                    The next evolution in cybersecurity. We combine specialized artificial intelligence with elite human
+                    expertise to secure the interconnected future.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Navigation</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="service.html" class="text-brand-cyan transition-colors">Operational Matrix</a></li>
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Investment Tiers
+                            (Pricing)</a></li>
+                    <li><a href="aboutus.html" class="hover:text-brand-cyan transition-colors">The AI+Human
+                            Advantage</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Request Consultation</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-mono text-sm mb-4">Command Center</h5>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Dashboard Login</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">API Documentation</a></li>
+                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Threat Advisories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-mono">
+            <p>&copy; 2026 Crooksec Intelligence. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.service-section');
+            const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+            // Intersection Observer for highlighting sidebar links
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove active class from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove('bg-brand-blue/10', 'text-brand-blue', 'border-brand-blue/30');
+                            link.classList.add('text-slate-400', 'border-white/5', 'hover:bg-white/5');
+                        });
+
+                        // Add active class to corresponding link
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.sidebar-nav a[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.remove('text-slate-400', 'border-white/5', 'hover:bg-white/5');
+                            activeLink.classList.add('bg-brand-blue/10', 'text-brand-blue', 'border-brand-blue/30');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Re-initialize other scripts (e.g., animations) if they exist globally
+            if (typeof ScrollReveal !== 'undefined') {
+                ScrollReveal().reveal('.reveal', { delay: 200, duration: 800, distance: '50px', origin: 'bottom', reset: false });
+            }
+        });
+    </script>
+</body>
+
+</html>
