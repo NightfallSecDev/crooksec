@@ -7,7 +7,7 @@
     <title>Contact | Crooksec</title>
     <meta name="description" content="Establish a secure connection with Crooksec's elite human + AI operatives.">
     <!-- Custom JS (Config & Interactions) -->
-    <script src="main.js"></script>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -17,7 +17,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body
@@ -37,7 +37,7 @@
                 <i class="fa-solid fa-shield-halved text-brand-cyan text-2xl"></i>
                 <a href="index.html" class="text-2xl font-bold tracking-tighter text-white font-mono">CROOKSEC</a>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-mono text-slate-300">
+            <div class="hidden lg:flex gap-8 text-sm font-mono text-slate-300">
                 <a href="service.html" class="hover:text-brand-cyan transition-colors">/SERVICES</a>
                 <a href="aboutus.html" class="hover:text-brand-cyan transition-colors">/ABOUT_US</a>
                 <a href="Pricing.html" class="hover:text-brand-cyan transition-colors">/PRICING</a>
@@ -53,11 +53,11 @@
                 <a href="contact.html" class="text-brand-cyan transition-colors font-bold">/CONTACT</a>
             </div>
             <div class="flex items-center gap-4">
-                <button
+                <a href="contact.html"
                     class="btn-scan hidden sm:inline-flex px-5 py-2.5 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 rounded-sm font-mono text-sm transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]">
                     INIT_SCAN <i class="fa-solid fa-terminal ml-2"></i>
-                </button>
-                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -65,7 +65,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
+            class="hidden lg:hidden fixed top-20 left-0 w-full bg-brand-darker/95 backdrop-blur-md border-b border-white/10 px-6 py-4 transition-all shadow-2xl z-40">
             <div class="flex flex-col gap-4 text-sm font-mono text-slate-300">
                 <a href="service.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/SERVICES</a>
                 <a href="aboutus.html" class="hover:text-brand-cyan transition-colors py-2 border-b border-white/5">/ABOUT_US</a>
@@ -355,51 +355,83 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6 mt-auto">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div class="col-span-1 md:col-span-2">
-                <div class="flex items-center gap-2 mb-4">
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+
+            <!-- Brand -->
+            <div class="sm:col-span-2">
+                <a href="index.html" class="flex items-center gap-2 mb-4">
                     <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
                     <span class="text-xl font-bold tracking-tighter text-white font-mono">CROOKSEC</span>
-                </div>
-                <p class="text-slate-500 text-sm max-w-sm font-light">
-                    The next evolution in cybersecurity. We combine specialized artificial intelligence with elite human
-                    expertise to secure the interconnected future.
+                </a>
+                <p class="text-slate-500 text-sm max-w-xs font-light leading-relaxed mb-6">
+                    The next evolution in cybersecurity. Human + AI powered to eliminate threats before they materialize.
                 </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded border border-white/10 text-slate-500 hover:text-brand-cyan hover:border-brand-cyan/40 transition-all text-sm"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded border border-white/10 text-slate-500 hover:text-brand-cyan hover:border-brand-cyan/40 transition-all text-sm"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded border border-white/10 text-slate-500 hover:text-brand-cyan hover:border-brand-cyan/40 transition-all text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded border border-white/10 text-slate-500 hover:text-brand-cyan hover:border-brand-cyan/40 transition-all text-sm"><i class="fa-brands fa-telegram"></i></a>
+                </div>
             </div>
+
+            <!-- Services -->
             <div>
-                <h5 class="text-white font-mono text-sm mb-4">Navigation</h5>
-                <ul class="space-y-2 text-slate-500 text-sm">
-                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Operational
-                            Matrix</a></li>
-                    <li><a href="Pricing.html" class="hover:text-brand-cyan transition-colors">Investment Tiers
-                            (Pricing)</a></li>
-                    <li><a href="aboutus.html" class="hover:text-brand-cyan transition-colors">The AI+Human
-                            Advantage</a></li>
-                    <li><a href="contact.html" class="text-brand-cyan transition-colors">Request Consultation</a></li>
+                <h5 class="text-white font-mono text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10">Services</h5>
+                <ul class="space-y-3 text-slate-500 text-sm">
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Penetration Testing</a></li>
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Red Team Operations</a></li>
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Cloud Security</a></li>
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">OSINT &amp; Threat Intel</a></li>
+                    <li><a href="service.html" class="hover:text-brand-cyan transition-colors">Managed SOC</a></li>
+                    <li><a href="Pricing.html" class="hover:text-brand-cyan transition-colors">View All Plans</a></li>
                 </ul>
             </div>
+
+            <!-- Company -->
             <div>
-                <h5 class="text-white font-mono text-sm mb-4">Command Center</h5>
-                <ul class="space-y-2 text-slate-500 text-sm">
-                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Dashboard Login</a></li>
-                    <li><a href="#" class="hover:text-brand-cyan transition-colors">API Documentation</a></li>
-                    <li><a href="#" class="hover:text-brand-cyan transition-colors">Threat Advisories</a></li>
+                <h5 class="text-white font-mono text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10">Company</h5>
+                <ul class="space-y-3 text-slate-500 text-sm">
+                    <li><a href="aboutus.html" class="hover:text-brand-cyan transition-colors">About Us</a></li>
+                    <li><a href="Case Studies.html" class="hover:text-brand-cyan transition-colors">Case Studies</a></li>
+                    <li><a href="patner.html" class="hover:text-brand-cyan transition-colors">Partner Network</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Contact Us</a></li>
+                    <li><a href="weareinattck.html" class="text-red-500 hover:text-red-400 transition-colors flex items-center gap-1"><i class="fa-solid fa-radiation text-xs"></i> Active Breach</a></li>
                 </ul>
             </div>
+
+            <!-- Legal -->
+            <div>
+                <h5 class="text-white font-mono text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10">Legal</h5>
+                <ul class="space-y-3 text-slate-500 text-sm">
+                    <li><a href="privacy-policy.html" class="hover:text-brand-cyan transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-brand-cyan transition-colors">Terms &amp; Conditions</a></li>
+                    <li><a href="cookie-policy.html" class="hover:text-brand-cyan transition-colors">Cookie Policy</a></li>
+                </ul>
+
+                <!-- Emergency CTA -->
+                <div class="mt-8 p-4 bg-red-500/5 border border-red-500/20 rounded-lg">
+                    <p class="text-red-400 font-mono text-xs mb-2 font-bold"><i class="fa-solid fa-triangle-exclamation mr-1"></i> UNDER ATTACK?</p>
+                    <a href="weareinattck.html" class="text-xs text-slate-400 hover:text-red-400 transition-colors leading-relaxed">Trigger emergency incident response &rarr;</a>
+                </div>
+            </div>
+
         </div>
-        <div
-            class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-mono">
-            <p>&copy; 2026 Crooksec Intelligence. All rights reserved.</p>
-            <div class="flex gap-4 mt-4 md:mt-0">
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i
-                        class="fa-brands fa-x-twitter text-lg"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+
+        <!-- Bottom Bar -->
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 font-mono gap-4">
+            <p class="text-center sm:text-left">&copy; 2026 Crooksec Intelligence. All rights reserved. All offensive operations are conducted under signed authorization only.</p>
+            <div class="flex gap-4 shrink-0">
+                <a href="privacy-policy.html" class="hover:text-slate-400 transition-colors">Privacy</a>
+                <span class="text-slate-800">|</span>
+                <a href="terms.html" class="hover:text-slate-400 transition-colors">Terms</a>
+                <span class="text-slate-800">|</span>
+                <a href="cookie-policy.html" class="hover:text-slate-400 transition-colors">Cookies</a>
             </div>
         </div>
     </footer>
 
+<script src="main.js?v=4" defer></script>
 </body>
 
 </html>
